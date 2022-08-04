@@ -18,7 +18,7 @@
         app:layout_constraintVertical_bias="0.547" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/practiceButton"
         android:layout_width="134dp"
         android:layout_height="68dp"
         android:text="Practice"
@@ -45,9 +45,9 @@
         android:layout_height="63dp"
         android:text="info"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/practiceButton"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/practiceButton" />
 
     <Button
         android:id="@+id/button4"
@@ -56,7 +56,7 @@
         android:text="stats"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintStart_toStartOf="@+id/practiceButton"
+        app:layout_constraintTop_toBottomOf="@+id/practiceButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
