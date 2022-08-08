@@ -8,5 +8,6 @@ class Daily : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         //Load activity_daily.xml
         setContentView(R.layout.activity_daily)
+        //test
     }
 }
