@@ -3,10 +3,10 @@ package com.example.culturle
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-class Practice : AppCompatActivity() {
+class Daily : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //Load activity_practice.xml
-        setContentView(R.layout.activity_practice)
+        //Load activity_daily.xml
+        setContentView(R.layout.activity_daily)
     }
 }
