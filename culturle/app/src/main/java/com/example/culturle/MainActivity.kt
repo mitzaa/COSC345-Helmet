@@ -30,5 +30,7 @@ open class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Practice::class.java)
             startActivity(intent)
         }
+
+        //Test
     }
 }
