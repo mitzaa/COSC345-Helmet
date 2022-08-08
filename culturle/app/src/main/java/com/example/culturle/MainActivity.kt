@@ -12,6 +12,16 @@ open class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         //Set the screen to the activity_main.xml
         setContentView(R.layout.activity_main)
+
+        //Set button object to the dailyButton id
+        val dailyButtonObj: Button = findViewById<View>(R.id.dailyButton) as Button
+        //Create button listen event to switch over to Practice class activity
+        // Intent is the method of handling the switch
+        dailyButtonObj.setOnClickListener {
+            val intent = Intent(this, Daily::class.java)
+            startActivity(intent)
+        }
+
         //Set button object to the practiceButton id
         val practiceButtonObj: Button = findViewById<View>(R.id.practiceButton) as Button
         //Create button listen event to switch over to Practice class activity
