@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -30,6 +31,23 @@ open class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Practice::class.java)
             startActivity(intent)
         }
-        //Test
+
+        //Set button object to the practiceButton id
+        val infoButtonObj: ImageButton = findViewById<View>(R.id.infoButton) as ImageButton
+        //Create button listen event to switch over to Practice class activity
+        // Intent is the method of handling the switch
+        infoButtonObj.setOnClickListener {
+            val intent = Intent(this, Info::class.java)
+            startActivity(intent)
+        }
+
+        //Set button object to the practiceButton id
+        val statsButtonObj: ImageButton = findViewById<View>(R.id.statsButton) as ImageButton
+        //Create button listen event to switch over to Practice class activity
+        // Intent is the method of handling the switch
+        statsButtonObj.setOnClickListener {
+            val intent = Intent(this, Stats::class.java)
+            startActivity(intent)
+        }
     }
 }
