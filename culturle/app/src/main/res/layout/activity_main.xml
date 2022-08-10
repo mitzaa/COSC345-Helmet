@@ -7,10 +7,13 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/dailyButton"
         android:layout_width="150dp"
         android:layout_height="65dp"
+        android:backgroundTint="#E91E63"
         android:text="Daily"
+        android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +24,10 @@
         android:id="@+id/practiceButton"
         android:layout_width="150dp"
         android:layout_height="65dp"
+        android:backgroundTint="#E91E63"
         android:text="Practice"
+        android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -31,38 +37,42 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="423dp"
-        android:layout_height="810dp"
+        android:layout_width="436dp"
+        android:layout_height="845dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.506"
+        app:layout_constraintVertical_bias="0.481"
         app:srcCompat="@drawable/background" />
 
     <ImageButton
         android:id="@+id/infoButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_dialog_info"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="433dp" />
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="36dp"
+        android:backgroundTint="#E91E63"
+        android:tint="#222121"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/statsButton"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64"
+        app:srcCompat="@android:drawable/ic_dialog_info" />
 
     <ImageButton
         android:id="@+id/statsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_myplaces"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="433dp" />
-
-    <ImageButton
-        android:id="@+id/settingsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_manage"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="433dp" />
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#E91E63"
+        android:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.721"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
