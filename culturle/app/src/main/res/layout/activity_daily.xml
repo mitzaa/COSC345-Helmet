@@ -17,4 +17,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.481"
         app:srcCompat="@drawable/background" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_media_play"
+        tools:layout_editor_absoluteX="350dp"
+        tools:layout_editor_absoluteY="203dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
