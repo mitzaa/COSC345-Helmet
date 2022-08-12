@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Culturle"
         tools:targetApi="31">
         <activity
-            android:name=".Artwork"
+            android:name=".EndScreen"
             android:exported="false" />
         <activity
             android:name=".Stats"
