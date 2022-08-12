@@ -17,7 +17,7 @@ class Daily : AppCompatActivity() {
     private var i = 0
     public var guesses = 0;
     private lateinit var binding: Daily
-    //
+    //CI Test new
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_daily)
