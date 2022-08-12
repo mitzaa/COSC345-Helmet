@@ -1,5 +1,6 @@
 package com.example.culturle
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -14,6 +15,7 @@ class Daily : AppCompatActivity() {
     private var flag = false
     private val images = intArrayOf(R.drawable.ic1, R.drawable.ic2, R.drawable.ic3)
     private var i = 0
+    public var guesses = 0;
     private lateinit var binding: Daily
 
 
@@ -24,9 +26,14 @@ class Daily : AppCompatActivity() {
         b1 = findViewById<View>(R.id.guessButton) as Button
         iv = findViewById<View>(R.id.hintImage) as ImageView?
         b1!!.setOnClickListener {
-            iv!!.setImageResource(images[i])
             i++
             if (i == 3) i = 0
+            iv!!.setImageResource(images[i])
+            guesses++
+            if(guesses==6){
+                val intent = Intent(this, EndScreen::class.java)
+                startActivity(intent)
+            }
         }
     }
 }
