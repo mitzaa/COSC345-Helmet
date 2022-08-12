@@ -5,15 +5,7 @@
     <string name="submitted_lang">Submitted language:</string>
 
     <string-array name="Languages">
-        <item>Java</item>
-        <item>Kotlin</item>
-        <item>Swift</item>
-        <item>Python</item>
-        <item>Scala</item>
-        <item>Perl</item>
-        <item>Javascript</item>
-        <item>Jquery</item>
-        <!--   <item>Antigua and Barbuda</item>
+        <item>Antigua and Barbuda</item>
            <item>Argentina</item>
            <item>Armenia</item>
            <item>Australia</item>
@@ -200,7 +192,7 @@
            <item>Vietnam</item>
            <item>Yemen</item>
            <item>Zambia</item>
-           <item>Zimbabwe</item> -->
+           <item>Zimbabwe</item>
 
     </string-array>
 </resources>
