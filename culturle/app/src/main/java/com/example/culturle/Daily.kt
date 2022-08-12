@@ -17,7 +17,7 @@ class Daily : AppCompatActivity() {
     private var i = 0
     public var guesses = 0;
     private lateinit var binding: Daily
-   //delete this comment
+    //CI test
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
