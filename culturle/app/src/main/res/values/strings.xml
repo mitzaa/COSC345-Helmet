@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">culturle</string>
-    <string name="hint">Please type language...</string>
+    <string name="hint">Enter country name...</string>
     <string name="submit">Submit</string>
-    <string name="submitted_lang">Submitted language:</string>
+    <string name="submitted_country">Submitted Country:</string>
 
-    <string-array name="Languages">
+    <string-array name="Countries">
         <item>Antigua and Barbuda</item>
            <item>Argentina</item>
            <item>Armenia</item>
@@ -64,6 +64,7 @@
            <item>Gabon</item>
            <item>The Gambia</item>
            <item>Georgia</item>
+           <item>Germany</item>
            <item>Ghana</item>
            <item>Greece</item>
            <item>Grenada</item>
