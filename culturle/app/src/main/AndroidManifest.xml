@@ -17,6 +17,9 @@
             android:name=".EndScreen"
             android:exported="false" />
         <activity
+            android:name=".WinScreen"
+            android:exported="false" />
+        <activity
             android:name=".Stats"
             android:exported="false" />
         <activity
