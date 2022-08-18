@@ -8,11 +8,7 @@ import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.culturle.R
-import android.widget.Toast
-import java.nio.file.Files.size
 import java.util.*
-import kotlin.random.Random.Default.nextInt
 
 
 class Daily : AppCompatActivity() {
@@ -35,7 +31,7 @@ class Daily : AppCompatActivity() {
     private val i186 = intArrayOf(R.drawable.i186_animal, R.drawable.i186_flag, R.drawable.i186_food, R.drawable.i186_lang,  R.drawable.i186_paint)
     private val i187 = intArrayOf(R.drawable.i187_animal, R.drawable.i187_flag, R.drawable.i187_food, R.drawable.i187_lang,  R.drawable.i187_paint)
     var arr = arrayOf(i001, i035, i040, i055, i061, i069, i111, i115, i124, i127, i170, i186, i187)
-
+    var answers = arrayOf<String>("Afghanistan", "Chad", "Congo", "Eritrea", "France", "Guatemala", "Mexico", "Mongolia", "New Zealand", "Nigeria", "Switzerland", "United Kingdom", "United States")
 
     private var i = 0
     private var enteredText = "NONE"
@@ -45,7 +41,9 @@ class Daily : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val myRandomValues = (0..arr.size).random()
+        val rnd = Random()
+        val myRandomValues = rnd.nextInt(arr.size)
+//        val myRandomValues = (0..arr.size).random()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_daily)
         val autotextView = findViewById<AutoCompleteTextView>(R.id.autoTextView)
@@ -79,16 +77,18 @@ class Daily : AppCompatActivity() {
             iv!!.setImageResource(arr[myRandomValues][0])
             b1!!.setOnClickListener {
                 enteredText = autotextView.getText().toString()
-                if(enteredText == todaysCountry) {
+                if(enteredText == answers[myRandomValues]) {
                     val intent = Intent(this, WinScreen::class.java)
                     startActivity(intent)
+                }
+                else{
+                    autotextView.getText().clear()
                 }
                 if (i == 4) {
                     val intent = Intent(this, EndScreen::class.java)
                     startActivity(intent)
                 }
-                if (i == 4) i = 0
-                i++
+                if (i < 4) i++
                 iv!!.setImageResource(arr[myRandomValues][i])
             }
         }
