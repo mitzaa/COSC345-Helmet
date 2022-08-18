@@ -11,6 +11,8 @@ class Info : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
 
+        //Test
+
         //Set button object to the practiceButton id
         val homeButtonObj: Button = findViewById<View>(R.id.homeInfoButton) as Button
         //Create button listen event to switch over to Practice class activity
