@@ -1,4 +1,4 @@
-name: Android CI
+name: Java CI with Gradle
 
 on:
   push:
