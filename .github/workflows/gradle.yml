@@ -79,10 +79,10 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #        BRANCH: gh-pages
-        publish_dir: ./culturle/build/dokka/html # specify the 
+        publish_dir: .culturle/app/build/dokka/html # specify the 
       # builds zip file with kdoc website inside
     - name: Archive KDoc Documentation
       uses: actions/upload-artifact@v2
       with:
           name: KDoc Documentation Site
-          path: ./app/build/dokka/html
+          path: .culturle/app/build/dokka/html
