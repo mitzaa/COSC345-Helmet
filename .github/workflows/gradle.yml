@@ -1,88 +1,87 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-# This workflow will build a Java project with Gradle and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-gradle
-
-name: Java CI with Gradle
+name: CI with Gradle
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
-
-permissions:
-  contents: read
+    branches: [ "master" ]
 
 jobs:
-  build:
+  Build_APK:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up JDK 11
+    - name: set up JDK 11
       uses: actions/setup-java@v3
       with:
+        working-directory: ./culturle
         java-version: '11'
         distribution: 'temurin'
-    - name: Build with Gradle
-      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
-      with:
-        arguments: build
-        
-        
-  android_tests:
+        cache: gradle
+    - uses: actions/checkout@v2
+    - name: Grant execute permission for gradlew
+      working-directory: ./culturle  #Uncomment me - if your gradle file is inside a folder
+      run: chmod +x gradlew
+    - name: Build APK
+      working-directory: ./culturle  #Uncomment me - if your gradle file is inside a folder
+      run: ./gradlew assembleDebug # assembleDebug
+
+  Instrumental_Tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Grant execute permission for gradlew
-        working-directory: ./culturle
-      
+      - working-directory: ./culturle  #Uncomment me - if your gradle file is inside a folder
         run: chmod +x gradlew
       - name: Instrumentation Tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 28
-          script: ./culturle/gradlew connectedAndroidTest
+          working-directory: ./culturle
+          script: ./gradlew connectedAndroidTest
 
-  unit_tests:
+  Unit_Tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Grant execute permission for gradlew
-        working-directory: ./culturle
+      - working-directory: ./culturle  #Uncomment me - if your gradle file is inside a folder
         run: chmod +x gradlew
       - name: Unit tests
-        working-directory: ./culturle
+      - working-directory: ./culturle  #Uncomment me - if your gradle file is inside a folder
         run: ./gradlew test
+        
 
   Generate_Docs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 12
-      uses: ./actions/setup-java@v1
+      uses: actions/setup-java@v1
       with:
+        working-directory: ./culturle
         java-version: 12
     - name: Grant execute permission for gradlew
+    - working-directory: ./culturle
       run: chmod +x gradlew
     - name: Generate API documentation
+    - working-directory: ./culturle
       if: ${{github.event_name == 'push'}}
-      working-directory: ./culturle
       run: ./gradlew dokkaHtml
     - name: Deploy API documentation to Github Pages
       if: ${{github.event_name == 'push'}}
-      uses: ./peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@v3
       with:
+        working-directory: ./culturle
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #        BRANCH: gh-pages
-        publish_dir: .culturle/app/build/dokka/html # specify the 
+        publish_dir: ./app/build/dokka/html # specify the 
       # builds zip file with kdoc website inside
     - name: Archive KDoc Documentation
       uses: actions/upload-artifact@v2
       with:
           name: KDoc Documentation Site
-          path: .culturle/app/build/dokka/html
+          working-directory: ./culturle
+          path: app/build/dokka/html
