@@ -6,6 +6,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 
+/**
+ * Group Members: George Stewart ID: , Hayden Knox ID: , Hami Daly ID: , Marion Millard ID: , Micheal Young ID: ,
+ * This class Object is the instance of a Game completed by the user. Once the user has completed playing the game,
+ * this end screen is displayed creating an instance of this class.
+ */
 class EndScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
