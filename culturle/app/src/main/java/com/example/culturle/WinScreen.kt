@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
+
 /**
  * Group Members: George Stewart ID: , Hayden Knox ID: , Hami Daly ID: , Marion Millard ID: , Micheal Young ID: ,
  * This class Object is the instance of a Winning screen created by the user successfully completing a game.
@@ -15,6 +17,9 @@ class WinScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_win_screen)
+
+        val todays_country_display = findViewById<View>(com.example.culturle.R.id.textView10) as TextView
+        todays_country_display.setText(intent.getStringExtra("todaysCountry"))
 
         //Set button object to the practiceButton id
         val homeButtonObj: Button = findViewById<View>(R.id.winHome) as Button

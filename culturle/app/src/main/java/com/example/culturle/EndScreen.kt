@@ -1,10 +1,14 @@
 package com.example.culturle
 
+import android.R
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+
+
 
 /**
  * Group Members: George Stewart ID: , Hayden Knox ID: , Hami Daly ID: , Marion Millard ID: , Micheal Young ID: ,
@@ -14,10 +18,16 @@ import android.widget.Button
 class EndScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_end_screen)
+        setContentView(com.example.culturle.R.layout.activity_end_screen)
+
+        val todaysCountryDisplay = findViewById<View>(com.example.culturle.R.id.textView10) as TextView
+        todaysCountryDisplay.setText(intent.getStringExtra("todaysCountry"))
+
+    //    val todaysFlagDisplay = findViewById<View>(com.example.culturle.R.id.imageView6)
+    //    todaysFlagDisplay.setImageResource(com.example.culturle.R.drawable.i001_animal)
 
         //Set button object to the practiceButton id
-        val homeButtonObj: Button = findViewById<View>(R.id.endHome) as Button
+        val homeButtonObj: Button = findViewById<View>(com.example.culturle.R.id.endHome) as Button
         //Create button listen event to switch over to Practice class activity
         // Intent is the method of handling the switch
         homeButtonObj.setOnClickListener {

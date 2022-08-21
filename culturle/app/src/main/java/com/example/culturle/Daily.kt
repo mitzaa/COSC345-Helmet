@@ -100,8 +100,6 @@ class Daily : AppCompatActivity() {
         )
         autotextView.setAdapter(adapter)
 
-        todaysCountry = "Germany"
-
         val guessBtn = findViewById<Button>(R.id.guessButton)
         // This if statement block is used to compare the guess country entered by the user
         // to the country held as an answer by the game
@@ -123,11 +121,16 @@ class Daily : AppCompatActivity() {
             iv!!.setImageResource(arr[myRandomValues][0])
             b1!!.setOnClickListener {
                 enteredText = autotextView.getText().toString()
+
+                todaysCountry = answers[myRandomValues]
+
                 // These blocks of if and else statements are used to determine if the used has entered
                 // a guess which results in a win or a loss that the user is directed to either the loss
                 // page of the game or then win page which displays the points and gains of their attempts.
                 if(enteredText == answers[myRandomValues]) {
                     val intent = Intent(this, WinScreen::class.java)
+                    intent.putExtra("todaysCountry", todaysCountry);
+                    intent.putExtra("todaysFlag", arr[myRandomValues][i]);
                     startActivity(intent)
                     // if this if statement condition results as true. This win page is displayed
                     // if the enteredText variable by the user matches the random text value selected
@@ -143,6 +146,8 @@ class Daily : AppCompatActivity() {
                 // displays its end screen.
                 if (i == 4) {
                     val intent = Intent(this, EndScreen::class.java)
+                    intent.putExtra("todaysCountry", todaysCountry);
+                    intent.putExtra("todaysFlag", arr[myRandomValues][1]);
                     startActivity(intent)
                 }
                 // This if statement executes if the  number of guesses attempted per

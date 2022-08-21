@@ -47,8 +47,8 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="135dp"
-        android:layout_height="35dp"
+        android:layout_width="185dp"
+        android:layout_height="55dp"
         android:background="#777777"
         android:text="Well done!\n The Country Was:"
         android:textAlignment="center"
@@ -63,10 +63,9 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="135dp"
+        android:layout_width="200dp"
         android:layout_height="35dp"
         android:background="#777777"
-        android:text="New Zealand"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
