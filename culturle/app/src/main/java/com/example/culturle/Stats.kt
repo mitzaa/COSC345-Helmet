@@ -17,7 +17,13 @@ class Stats : AppCompatActivity() {
         setContentView(R.layout.activity_stats)
 
         val preferenceManager = PreferenceManager()
-        preferenceManager.setPreference("gamesPlayed",12,this)
+
+        preferenceManager.setPreference("aveGuess",1,this)
+        val aveGuess = preferenceManager.getValue("aveGuess",this)
+        val aveGuessDisplay = findViewById<View>(com.example.culturle.R.id.aveGuessesView) as TextView
+        aveGuessDisplay.setText("Average \n Guesses: \n" + aveGuess)
+
+        //preferenceManager.setPreference("gamesPlayed",12,this)
         val gamesPlayed = preferenceManager.getValue("gamesPlayed",this)
         val gamesPlayedDisplay = findViewById<View>(com.example.culturle.R.id.gamesPlayedView) as TextView
         gamesPlayedDisplay.setText("Games \n Played: \n" + gamesPlayed)
