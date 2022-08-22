@@ -70,7 +70,7 @@ class Daily : AppCompatActivity() {
     */
     private var i = 0
     private var enteredText = "NONE"
-    var guesses = 0
+    var guesses = 0;
     var todaysCountry = "NONE"
     private lateinit var binding: Daily
 
@@ -99,13 +99,6 @@ class Daily : AppCompatActivity() {
             android.R.layout.simple_list_item_1, countries
         )
         autotextView.setAdapter(adapter)
-
-
-        val preferenceManager = PreferenceManager()
-        val gamesPlayed = preferenceManager.getValue("gamesPlayed",this)
-        preferenceManager.setPreference("gamesPlayed",gamesPlayed + 1,this)
-
-
 
         val guessBtn = findViewById<Button>(R.id.guessButton)
         // This if statement block is used to compare the guess country entered by the user
@@ -136,8 +129,8 @@ class Daily : AppCompatActivity() {
                 // page of the game or then win page which displays the points and gains of their attempts.
                 if(enteredText == answers[myRandomValues]) {
                     val intent = Intent(this, WinScreen::class.java)
-                    intent.putExtra("todaysCountry", todaysCountry)
-                    intent.putExtra("todaysFlag", arr[myRandomValues][i])
+                    intent.putExtra("todaysCountry", todaysCountry);
+                    intent.putExtra("todaysFlag", arr[myRandomValues]);
                     startActivity(intent)
                     // if this if statement condition results as true. This win page is displayed
                     // if the enteredText variable by the user matches the random text value selected
@@ -153,8 +146,8 @@ class Daily : AppCompatActivity() {
                 // displays its end screen.
                 if (i == 4) {
                     val intent = Intent(this, EndScreen::class.java)
-                    intent.putExtra("todaysCountry", todaysCountry)
-                    intent.putExtra("todaysFlag", arr[myRandomValues][1])
+                    intent.putExtra("todaysCountry", todaysCountry);
+                    intent.putExtra("todaysFlag", arr[myRandomValues]);
                     startActivity(intent)
                 }
                 // This if statement executes if the  number of guesses attempted per

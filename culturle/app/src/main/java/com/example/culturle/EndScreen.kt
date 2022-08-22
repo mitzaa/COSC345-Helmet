@@ -1,13 +1,12 @@
 package com.example.culturle
 
-import android.R
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-
 
 
 /**
@@ -23,8 +22,9 @@ class EndScreen : AppCompatActivity() {
         val todaysCountryDisplay = findViewById<View>(com.example.culturle.R.id.textView10) as TextView
         todaysCountryDisplay.setText(intent.getStringExtra("todaysCountry"))
 
-    //    val todaysFlagDisplay = findViewById<View>(com.example.culturle.R.id.imageView6)
-    //    todaysFlagDisplay.setImageResource(com.example.culturle.R.drawable.i001_animal)
+        val todaysCountryFlag = findViewById<View>(com.example.culturle.R.id.countryFlagEnd) as ImageView
+        val todaysArray = intent.getIntArrayExtra("todaysFlag")
+        todaysCountryFlag.setImageResource(todaysArray!![1])
 
         //Set button object to the practiceButton id
         val homeButtonObj: Button = findViewById<View>(com.example.culturle.R.id.endHome) as Button

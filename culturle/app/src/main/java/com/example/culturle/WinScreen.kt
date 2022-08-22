@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 
 /**
@@ -20,6 +21,10 @@ class WinScreen : AppCompatActivity() {
 
         val todays_country_display = findViewById<View>(com.example.culturle.R.id.textView10) as TextView
         todays_country_display.setText(intent.getStringExtra("todaysCountry"))
+
+        val todaysCountryFlag = findViewById<View>(com.example.culturle.R.id.countryFlagEnd) as ImageView
+        val todaysArray = intent.getIntArrayExtra("todaysFlag")
+        todaysCountryFlag.setImageResource(todaysArray!![1])
 
         //Set button object to the practiceButton id
         val homeButtonObj: Button = findViewById<View>(R.id.winHome) as Button
