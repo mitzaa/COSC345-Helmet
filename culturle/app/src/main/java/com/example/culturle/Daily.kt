@@ -45,6 +45,8 @@ class Daily : AppCompatActivity() {
     private val i170 = intArrayOf(R.drawable.i170_animal, R.drawable.i170_flag, R.drawable.i170_food, R.drawable.i170_lang,  R.drawable.i170_paint)
     private val i186 = intArrayOf(R.drawable.i186_animal, R.drawable.i186_flag, R.drawable.i186_food, R.drawable.i186_lang,  R.drawable.i186_paint)
     private val i187 = intArrayOf(R.drawable.i187_animal, R.drawable.i187_flag, R.drawable.i187_food, R.drawable.i187_lang,  R.drawable.i187_paint)
+
+    var order = intArrayOf(0, 4, 2, 3, 1)
     /*
     * For the simplicity of randomly selecting an answer country without a pattern. The country entries
     * are added as elements in a 2-Dimensional array. Each variable such as "i001" is a country within
@@ -155,7 +157,7 @@ class Daily : AppCompatActivity() {
                 // entered by the user. When this variable increments higher a new image is displayed in
                 // the setImageResource variable from the array of country images.
                 if (i < 4) i++
-                iv!!.setImageResource(arr[myRandomValues][i])
+                iv!!.setImageResource(arr[myRandomValues][order[i]])
             }
         }
     }
