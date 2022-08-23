@@ -46,6 +46,7 @@ class Daily : AppCompatActivity() {
     private val i186 = intArrayOf(R.drawable.i186_animal, R.drawable.i186_flag, R.drawable.i186_food, R.drawable.i186_lang,  R.drawable.i186_paint)
     private val i187 = intArrayOf(R.drawable.i187_animal, R.drawable.i187_flag, R.drawable.i187_food, R.drawable.i187_lang,  R.drawable.i187_paint)
 
+    // Order of the hints to be shown
     var order = intArrayOf(0, 4, 2, 3, 1)
     /*
     * For the simplicity of randomly selecting an answer country without a pattern. The country entries

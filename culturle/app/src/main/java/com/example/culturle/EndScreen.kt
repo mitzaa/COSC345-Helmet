@@ -19,6 +19,7 @@ class EndScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(com.example.culturle.R.layout.activity_end_screen)
 
+        // Grab image and text views by id and then set them to today's countries
         val todaysCountryDisplay = findViewById<View>(com.example.culturle.R.id.textView10) as TextView
         todaysCountryDisplay.setText(intent.getStringExtra("todaysCountry"))
 
