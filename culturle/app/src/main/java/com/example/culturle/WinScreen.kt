@@ -26,9 +26,16 @@ class WinScreen : AppCompatActivity() {
             var gamesWon = preferenceManager.getValue("gamesWon",this)
             preferenceManager.setPreference("gamesWon",gamesWon + 1,this)
 
-            var totalGuesses = preferenceManager.getValue("totalGuesses", this)
-            totalGuesses = totalGuesses + (intent.getIntExtra("numGuesses", 0))
+            var totalGuesses = preferenceManager.getValue("totalGuesses", this) + (intent.getIntExtra("numGuesses", 0))
             preferenceManager.setPreference("totalGuesses", totalGuesses,this)
+
+            preferenceManager.setPreference("isWinStreak",1,this)
+            var winStreak = preferenceManager.getValue("winStreak",this) + 1
+            preferenceManager.setPreference("winStreak",winStreak,this)
+            var bestStreak = preferenceManager.getValue("bestStreak",this)
+            if(winStreak > bestStreak) {
+                preferenceManager.setPreference("bestStreak",winStreak,this)
+            }
         }
 
         val num_guesses_display = findViewById<View>(com.example.culturle.R.id.numGuessesView) as TextView
