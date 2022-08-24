@@ -19,6 +19,16 @@ class EndScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(com.example.culturle.R.layout.activity_end_screen)
 
+        val preferenceManager = PreferenceManager()
+
+        val dailyMode = intent.getBooleanExtra("dailyMode", false)
+        if(dailyMode) {
+            var totalGuesses = preferenceManager.getValue("totalGuesses", this)
+            totalGuesses = totalGuesses + 5
+            preferenceManager.setPreference("totalGuesses", totalGuesses,this)
+        }
+
+
         // Grab image and text views by id and then set them to today's countries
         val todaysCountryDisplay = findViewById<View>(com.example.culturle.R.id.textView10) as TextView
         todaysCountryDisplay.setText(intent.getStringExtra("todaysCountry"))

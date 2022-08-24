@@ -19,6 +19,21 @@ class WinScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_win_screen)
 
+        val preferenceManager = PreferenceManager()
+
+        val dailyMode = intent.getBooleanExtra("dailyMode", false)
+        if(dailyMode) {
+            var gamesWon = preferenceManager.getValue("gamesWon",this)
+            preferenceManager.setPreference("gamesWon",gamesWon + 1,this)
+
+            var totalGuesses = preferenceManager.getValue("totalGuesses", this)
+            totalGuesses = totalGuesses + (intent.getIntExtra("numGuesses", 0))
+            preferenceManager.setPreference("totalGuesses", totalGuesses,this)
+        }
+
+        val num_guesses_display = findViewById<View>(com.example.culturle.R.id.numGuessesView) as TextView
+        num_guesses_display.setText("Guesses: " + intent.getIntExtra("numGuesses", 0))
+
         val todays_country_display = findViewById<View>(com.example.culturle.R.id.textView10) as TextView
         todays_country_display.setText(intent.getStringExtra("todaysCountry"))
 

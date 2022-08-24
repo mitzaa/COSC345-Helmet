@@ -72,10 +72,10 @@ class Daily : AppCompatActivity() {
     * At the present time it is not used.
     */
     private var i = 0
+    private var numGuesses = 1;
     private var enteredText = "NONE"
-    var guesses = 0;
     var todaysCountry = "NONE"
-    private lateinit var binding: Daily
+    //private lateinit var binding: Daily
 
     /**
      * @param: Bundle
@@ -87,6 +87,14 @@ class Daily : AppCompatActivity() {
         // creates a random index column number for the 2-dimensional array so a country entry containing
         // images is chosen at random.
         val rnd = Random()
+
+        var dailyMode = intent.getBooleanExtra("dailyMode", false)
+        if(dailyMode) {
+            val preferenceManager = PreferenceManager()
+            val gamesPlayed = preferenceManager.getValue("gamesPlayed",this)
+            preferenceManager.setPreference("gamesPlayed", gamesPlayed + 1,this)
+        }
+
         // This variable is dynamically used to produce a random int number for the 2-dimensional array based on the
         // number of elements it contains. This variable number range will be updated when the completion of more countries can be
         // entered.
@@ -132,8 +140,10 @@ class Daily : AppCompatActivity() {
                 // page of the game or then win page which displays the points and gains of their attempts.
                 if(enteredText == answers[myRandomValues]) {
                     val intent = Intent(this, WinScreen::class.java)
-                    intent.putExtra("todaysCountry", todaysCountry);
-                    intent.putExtra("todaysFlag", arr[myRandomValues]);
+                    intent.putExtra("todaysCountry", todaysCountry)
+                    intent.putExtra("todaysFlag", arr[myRandomValues])
+                    intent.putExtra("dailyMode", dailyMode)
+                    intent.putExtra("numGuesses", numGuesses)
                     startActivity(intent)
                     // if this if statement condition results as true. This win page is displayed
                     // if the enteredText variable by the user matches the random text value selected
@@ -149,16 +159,20 @@ class Daily : AppCompatActivity() {
                 // displays its end screen.
                 if (i == 4) {
                     val intent = Intent(this, EndScreen::class.java)
-                    intent.putExtra("todaysCountry", todaysCountry);
-                    intent.putExtra("todaysFlag", arr[myRandomValues]);
+                    intent.putExtra("todaysCountry", todaysCountry)
+                    intent.putExtra("todaysFlag", arr[myRandomValues])
+                    intent.putExtra("dailyMode", dailyMode)
                     startActivity(intent)
                 }
                 // This if statement executes if the  number of guesses attempted per
                 // daily game is less than the limit. This variable increases for the number guess attempts
                 // entered by the user. When this variable increments higher a new image is displayed in
                 // the setImageResource variable from the array of country images.
-                if (i < 4) i++
-                iv!!.setImageResource(arr[myRandomValues][order[i]])
+                if (i < 4) {
+                    i++
+                    numGuesses++;
+                }
+                    iv!!.setImageResource(arr[myRandomValues][order[i]])
             }
         }
     }

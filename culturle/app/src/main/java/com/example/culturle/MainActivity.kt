@@ -20,6 +20,9 @@ open class MainActivity : AppCompatActivity() {
         //Set the screen to the activity_main.xml
         setContentView(R.layout.activity_main)
 
+        //Boolean which determines whether this game instance is Daily mode or Practice mode
+        var dailyMode = false;
+
         /*
         * This button is used to direct game users to the GamePlay page so that users may play the game using their
         * daily game allotment and their results will be updated to the Stats page.
@@ -30,7 +33,9 @@ open class MainActivity : AppCompatActivity() {
         //Create button listen event to switch over to Practice class activity
         // Intent is the method of handling the switch
         dailyButtonObj.setOnClickListener {
+            //dailyMode = true
             val intent = Intent(this, Daily::class.java)
+            intent.putExtra("dailyMode", dailyMode);
             startActivity(intent)
         }
         /*
@@ -42,7 +47,9 @@ open class MainActivity : AppCompatActivity() {
         //Create button listen event to switch over to Practice class activity
         // Intent is the method of handling the switch
         practiceButtonObj.setOnClickListener {
-            val intent = Intent(this, Practice::class.java)
+            //dailyMode = false
+            val intent = Intent(this, Daily::class.java)
+            intent.putExtra("dailyMode", dailyMode)
             startActivity(intent)
         }
         /*
@@ -55,6 +62,7 @@ open class MainActivity : AppCompatActivity() {
         // Intent is the method of handling the switch
         infoButtonObj.setOnClickListener {
             val intent = Intent(this, Info::class.java)
+            intent.putExtra("dailyMode", dailyMode)
             startActivity(intent)
         }
 

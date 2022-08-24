@@ -18,15 +18,17 @@ class Stats : AppCompatActivity() {
 
         val preferenceManager = PreferenceManager()
 
-        preferenceManager.setPreference("aveGuess",1,this)
-        val aveGuess = preferenceManager.getValue("aveGuess",this)
+        val aveGuess = preferenceManager.getValue("totalGuesses",this)/preferenceManager.getValue("gamesPlayed",this)
         val aveGuessDisplay = findViewById<View>(com.example.culturle.R.id.aveGuessesView) as TextView
         aveGuessDisplay.setText("Average \n Guesses: \n" + aveGuess)
 
-        //preferenceManager.setPreference("gamesPlayed",12,this)
-        val gamesPlayed = preferenceManager.getValue("gamesPlayed",this)
+        val gamesPlayed = preferenceManager.getValue("gamesPlayed",this) + 1
         val gamesPlayedDisplay = findViewById<View>(com.example.culturle.R.id.gamesPlayedView) as TextView
         gamesPlayedDisplay.setText("Games \n Played: \n" + gamesPlayed)
+
+        val gamesWon = preferenceManager.getValue("gamesWon",this)
+        val gamesWonDisplay = findViewById<View>(com.example.culturle.R.id.gamesWonView) as TextView
+        gamesWonDisplay.setText("Games \n Won: \n" + gamesWon)
 
 
         //Set button object to the practiceButton id
