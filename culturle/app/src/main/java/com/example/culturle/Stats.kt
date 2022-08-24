@@ -22,13 +22,21 @@ class Stats : AppCompatActivity() {
         val aveGuessDisplay = findViewById<View>(com.example.culturle.R.id.aveGuessesView) as TextView
         aveGuessDisplay.setText("Average \n Guesses: \n" + aveGuess)
 
-        val gamesPlayed = preferenceManager.getValue("gamesPlayed",this) + 1
+        val gamesPlayed = preferenceManager.getValue("gamesPlayed",this)
         val gamesPlayedDisplay = findViewById<View>(com.example.culturle.R.id.gamesPlayedView) as TextView
         gamesPlayedDisplay.setText("Games \n Played: \n" + gamesPlayed)
 
         val gamesWon = preferenceManager.getValue("gamesWon",this)
         val gamesWonDisplay = findViewById<View>(com.example.culturle.R.id.gamesWonView) as TextView
         gamesWonDisplay.setText("Games \n Won: \n" + gamesWon)
+
+        val winStreak = preferenceManager.getValue("winStreak",this)
+        val winStreakDisplay = findViewById<View>(com.example.culturle.R.id.winStreakView) as TextView
+        winStreakDisplay.setText("Current \n Streak: \n" + winStreak)
+
+        val bestStreak = preferenceManager.getValue("bestStreak",this)
+        val bestStreakDisplay = findViewById<View>(com.example.culturle.R.id.bestStreakView) as TextView
+        bestStreakDisplay.setText("Best \n Streak: \n" + bestStreak)
 
 
         //Set button object to the practiceButton id

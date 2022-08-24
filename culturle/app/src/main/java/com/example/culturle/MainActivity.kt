@@ -33,7 +33,7 @@ open class MainActivity : AppCompatActivity() {
         //Create button listen event to switch over to Practice class activity
         // Intent is the method of handling the switch
         dailyButtonObj.setOnClickListener {
-            //dailyMode = true
+            dailyMode = true
             val intent = Intent(this, Daily::class.java)
             intent.putExtra("dailyMode", dailyMode);
             startActivity(intent)
@@ -47,7 +47,7 @@ open class MainActivity : AppCompatActivity() {
         //Create button listen event to switch over to Practice class activity
         // Intent is the method of handling the switch
         practiceButtonObj.setOnClickListener {
-            //dailyMode = false
+            dailyMode = false
             val intent = Intent(this, Daily::class.java)
             intent.putExtra("dailyMode", dailyMode)
             startActivity(intent)

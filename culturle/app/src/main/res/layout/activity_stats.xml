@@ -89,7 +89,6 @@
         android:layout_height="93dp"
         android:layout_marginTop="52dp"
         android:background="#6E6E6E"
-        android:text="Current \n Streak: \n 0"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -101,12 +100,11 @@
         app:layout_constraintVertical_bias="0.55" />
 
     <TextView
-        android:id="@+id/maxStreakView"
+        android:id="@+id/bestStreakView"
         android:layout_width="119dp"
         android:layout_height="93dp"
         android:layout_marginTop="52dp"
         android:background="#6E6E6E"
-        android:text=" Max \n Streak: \n 0"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
