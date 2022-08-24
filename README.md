@@ -1,5 +1,1 @@
-test
-Does this work?
-tryna get sourcetree to work
-hello everybody!
-hi
+![workflow badge](https://github.com/mitzaa/COSC345-Helmet/actions/workflows/gradle.yml/badge.svg)
