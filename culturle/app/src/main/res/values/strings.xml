@@ -3,8 +3,11 @@
     <string name="hint">Enter country name...</string>
     <string name="submit">Submit</string>
     <string name="submitted_country">Submitted Country:</string>
+    <string name="how_to_play">How To Play</string>
+   <string name="home">Home</string>
+   <string name="info_page">Info Page</string>
 
-    <string-array name="Countries">
+   <string-array name="Countries">
         <item>Antigua and Barbuda</item>
            <item>Argentina</item>
            <item>Armenia</item>
