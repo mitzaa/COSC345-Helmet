@@ -24,6 +24,7 @@ open class MainActivity : AppCompatActivity() {
 
         val preferenceManager = PreferenceManager()
         val dateManager = DateManager()
+        dateManager.getCurrentDate(this)
         if(dateManager.isNewDay(this)) {
             preferenceManager.setIntPreference("attemptedDaily", 0, this)
             dateManager.updateDates(this)
@@ -41,19 +42,15 @@ open class MainActivity : AppCompatActivity() {
         // Intent is the method of handling the switch
         dailyButtonObj.setOnClickListener {
             if(preferenceManager.getIntValue("attemptedDaily", this) == 0) {
+                preferenceManager.setIntPreference("attemptedDaily", 1, this)
                 dailyMode = true
                 val intent = Intent(this, Daily::class.java)
                 intent.putExtra("dailyMode", dailyMode)
                 startActivity(intent)
             } else {
-                ///////////////
                 dailyMode = true
-                val intent = Intent(this, EndScreen::class.java)
-                intent.putExtra("todaysCountry", "BRUH")
-                intent.putExtra("todaysFlag", "no")
-                intent.putExtra("dailyMode", dailyMode)
+                val intent = Intent(this, AttemptedDailyScreen::class.java)
                 startActivity(intent)
-                //////////////////////////////////
             }
         }
         /*

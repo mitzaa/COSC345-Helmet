@@ -40,8 +40,6 @@ class WinScreen : AppCompatActivity() {
 
         val numGuessesDisplay = findViewById<View>(R.id.numGuessesView) as TextView
         numGuessesDisplay.setText("Guesses: " + intent.getIntExtra("numGuesses", 0))
-        //val dateManager = DateManager()
-        //num_guesses_display.setText("isNewDay " + dateManager.isNewDay(this) + "\n date: " + dateManager.getCurrentDate(this))
 
         val todaysCountryDisplay = findViewById<View>(R.id.textView10) as TextView
         todaysCountryDisplay.setText(intent.getStringExtra("todaysCountry"))

@@ -9,7 +9,8 @@ class DateManager {
     fun getActiveDate(context : Context): String {
         val activeDate = preferenceManager.getStrValue("activeDate", context)
         if(activeDate == "DEFAULT") {
-            val date = (Calendar.YEAR).toString() + (Calendar.MONTH).toString() + (Calendar.DAY_OF_MONTH).toString()
+            var currentDate = Calendar.getInstance()
+            var date = currentDate.getTime().toString().substring(0, 10)
             preferenceManager.setStrPreference("activeDate", date, context)
             preferenceManager.setStrPreference("currentDate", date, context)
         }
@@ -17,39 +18,30 @@ class DateManager {
     }
 
     fun getCurrentDate(context : Context): String {
-        val activeDate = preferenceManager.getStrValue("currentDate", context)
-        if(activeDate == "DEFAULT") {
-            val date = (Calendar.YEAR).toString() + (Calendar.MONTH).toString() + (Calendar.DAY_OF_MONTH).toString()
+        val currentDate = preferenceManager.getStrValue("currentDate", context)
+        if(currentDate == "DEFAULT") {
+            var currentDate = Calendar.getInstance()
+            val date = currentDate.getTime().toString().substring(0, 10)
             preferenceManager.setStrPreference("currentDate", date, context)
+            preferenceManager.setStrPreference("activeDate", date, context)
         }
         return preferenceManager.getStrValue("currentDate", context)
     }
 
     fun updateDates(context : Context) {
         if(preferenceManager.getStrValue("currentDate", context) != preferenceManager.getStrValue("activeDate", context)) {
-            val date = (Calendar.YEAR).toString() + (Calendar.MONTH).toString() + (Calendar.DAY_OF_MONTH).toString()
+            var currentDate = Calendar.getInstance()
+            var date = currentDate.getTime().toString().substring(0, 10)
             preferenceManager.setStrPreference("activeDate", date, context)
             preferenceManager.setStrPreference("currentDate", date, context)
         }
     }
 
     fun isNewDay(context : Context): Boolean {
-        if(preferenceManager.getStrValue("currentDate", context) != preferenceManager.getStrValue("activeDate", context)) {
+        if(preferenceManager.getStrValue("currentDate", context) == preferenceManager.getStrValue("activeDate", context)) {
             return false
         }
         return true
-    }
-
-    fun getDay(): String{
-        return ((Calendar.DAY_OF_MONTH).toString())
-    }
-
-    fun getMonth(): String{
-        return ((Calendar.MONTH).toString())
-    }
-
-    fun getYear(): String{
-        return ((Calendar.YEAR).toString())
     }
 
 }
