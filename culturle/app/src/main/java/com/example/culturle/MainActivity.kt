@@ -22,7 +22,13 @@ open class MainActivity : AppCompatActivity() {
         //Boolean which determines whether this game instance is Daily mode or Practice mode
         var dailyMode = false;
 
-        //val calendar = Calendar.getInstance();
+        val preferenceManager = PreferenceManager()
+        val dateManager = DateManager()
+        if(dateManager.isNewDay(this)) {
+            preferenceManager.setIntPreference("attemptedDaily", 0, this)
+            dateManager.updateDates(this)
+        }
+
 
         /*
         * This button is used to direct game users to the GamePlay page so that users may play the game using their
@@ -34,10 +40,19 @@ open class MainActivity : AppCompatActivity() {
         //Create button listen event to switch over to Practice class activity
         // Intent is the method of handling the switch
         dailyButtonObj.setOnClickListener {
-            dailyMode = true
-            val intent = Intent(this, Daily::class.java)
-            intent.putExtra("dailyMode", dailyMode);
-            startActivity(intent)
+            if(preferenceManager.getIntValue("attemptedDaily", this) == 0) {
+                dailyMode = true
+                val intent = Intent(this, Daily::class.java)
+                intent.putExtra("dailyMode", dailyMode);
+                startActivity(intent)
+            } else {
+                dailyMode = true
+                val intent = Intent(this, EndScreen::class.java)
+                intent.putExtra("todaysCountry", "BRUH")
+                intent.putExtra("todaysFlag", "no")
+                intent.putExtra("dailyMode", dailyMode)
+                startActivity(intent)
+            }
         }
         /*
         * This button is used to direct game users to the practice game page so that users may practice the game without using their

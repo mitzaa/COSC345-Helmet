@@ -88,12 +88,17 @@ class Daily : AppCompatActivity() {
         // images is chosen at random.
         val rnd = Random()
 
+        val dateManager = DateManager()
+
         var dailyMode = intent.getBooleanExtra("dailyMode", false)
         if(dailyMode) {
             val preferenceManager = PreferenceManager()
             val gamesPlayed = preferenceManager.getIntValue("gamesPlayed",this)
             preferenceManager.setIntPreference("gamesPlayed", gamesPlayed + 1,this)
+            preferenceManager.setIntPreference("attemptedDaily", 1, this)
         }
+
+        //if(dailyMode && dateManager.isNewDay())
 
         // This variable is dynamically used to produce a random int number for the 2-dimensional array based on the
         // number of elements it contains. This variable number range will be updated when the completion of more countries can be

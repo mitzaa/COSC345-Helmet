@@ -22,39 +22,40 @@ class Stats : AppCompatActivity() {
         val preferenceManager = PreferenceManager()
 
         var aveGuess = 0.0
-        var doubleGamesPlayed = preferenceManager.getValue("gamesPlayed",this).toDouble()
-        var doubleTotalGuesses = preferenceManager.getValue("totalGuesses", this).toDouble()
-        if(preferenceManager.getValue("gamesPlayed",this) != 0) {
+        var doubleGamesPlayed = preferenceManager.getIntValue("gamesPlayed",this).toDouble()
+        var doubleTotalGuesses = preferenceManager.getIntValue("totalGuesses", this).toDouble()
+        if(preferenceManager.getIntValue("gamesPlayed",this) != 0) {
             aveGuess = ((doubleTotalGuesses / doubleGamesPlayed) * 100.0).roundToInt() / 100.0
         }
         val aveGuessDisplay = findViewById<View>(com.example.culturle.R.id.aveGuessesView) as TextView
         aveGuessDisplay.setText("Average \n Guesses: \n" + aveGuess)
 
         var winPercentage = 0
-        if(preferenceManager.getValue("gamesPlayed",this) != 0) {
-            val doubleGamesWon = preferenceManager.getValue("gamesWon", this).toDouble()
-            doubleGamesPlayed = preferenceManager.getValue("gamesPlayed", this).toDouble()
+        if(preferenceManager.getIntValue("gamesPlayed",this) != 0) {
+            val doubleGamesWon = preferenceManager.getIntValue("gamesWon", this).toDouble()
+            doubleGamesPlayed = preferenceManager.getIntValue("gamesPlayed", this).toDouble()
             winPercentage = ((doubleGamesWon / doubleGamesPlayed) * 100.0).roundToInt()
         }
         val winPercentageDisplay = findViewById<View>(com.example.culturle.R.id.winPercentageView) as TextView
         winPercentageDisplay.setText("Win %: \n " + winPercentage)
 
-        val gamesPlayed = preferenceManager.getValue("gamesPlayed",this)
+        val gamesPlayed = preferenceManager.getIntValue("gamesPlayed",this)
         val gamesPlayedDisplay = findViewById<View>(com.example.culturle.R.id.gamesPlayedView) as TextView
         gamesPlayedDisplay.setText("Games \n Played: \n" + gamesPlayed)
 
-        val gamesWon = preferenceManager.getValue("gamesWon",this)
+        val gamesWon = preferenceManager.getIntValue("gamesWon",this)
         val gamesWonDisplay = findViewById<View>(com.example.culturle.R.id.gamesWonView) as TextView
         gamesWonDisplay.setText("Games \n Won: \n" + gamesWon)
 
-        val winStreak = preferenceManager.getValue("winStreak",this)
+        val winStreak = preferenceManager.getIntValue("winStreak",this)
         val winStreakDisplay = findViewById<View>(com.example.culturle.R.id.winStreakView) as TextView
         winStreakDisplay.setText("Current \n Streak: \n" + winStreak)
+        //val dateManager = DateManager()
+        //winStreakDisplay.setText(dateManager.getDay() + "\n" + dateManager.getMonth() + "\n" + dateManager.getYear())
 
-        val bestStreak = preferenceManager.getValue("bestStreak",this)
+        val bestStreak = preferenceManager.getIntValue("bestStreak",this)
         val bestStreakDisplay = findViewById<View>(com.example.culturle.R.id.bestStreakView) as TextView
         bestStreakDisplay.setText("Best \n Streak: \n" + bestStreak)
-
 
         //Set button object to the practiceButton id
         val homeButtonObj: Button = findViewById<View>(R.id.homeStatsButton) as Button
