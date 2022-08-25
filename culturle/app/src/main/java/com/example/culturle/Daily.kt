@@ -23,7 +23,7 @@ class Daily : AppCompatActivity() {
     * a series of hits to the answer country. Lastly the variable flag is used to determine if the
     * user has guessed the correct answer country.
     */
-    private var b1: Button? = null
+    //private var b1: Button? = null
     private var iv: ImageView? = null
     private var flag = false
     /*
@@ -72,7 +72,7 @@ class Daily : AppCompatActivity() {
     * At the present time it is not used.
     */
     private var i = 0
-    private var numGuesses = 1;
+    private var numGuesses = 1
     private var enteredText = "NONE"
     var todaysCountry = "NONE"
     //private lateinit var binding: Daily
@@ -88,9 +88,7 @@ class Daily : AppCompatActivity() {
         // images is chosen at random.
         val rnd = Random()
 
-        val dateManager = DateManager()
-
-        var dailyMode = intent.getBooleanExtra("dailyMode", false)
+        val dailyMode = intent.getBooleanExtra("dailyMode", false)
         if(dailyMode) {
             val preferenceManager = PreferenceManager()
             val gamesPlayed = preferenceManager.getIntValue("gamesPlayed",this)
@@ -122,7 +120,7 @@ class Daily : AppCompatActivity() {
         if (guessBtn != null) {
             guessBtn.setOnClickListener(View.OnClickListener {
                 enteredText = autotextView.getText().toString()
-                val enteredText = getString(R.string.submitted_country) + " " + autotextView.getText()
+                //val enteredText = getString(R.string.submitted_country) + " " + autotextView.getText()
             })
             val autotextView = findViewById<AutoCompleteTextView>(R.id.autoTextView)
             val countries = resources.getStringArray(R.array.Countries)
@@ -132,10 +130,10 @@ class Daily : AppCompatActivity() {
             )
             autotextView.setAdapter(adapter)
             flag = true
-            b1 = findViewById<View>(R.id.guessButton) as Button
+            //b1 = findViewById<View>(R.id.guessButton) as Button
             iv = findViewById<View>(R.id.hintImage) as ImageView?
             iv!!.setImageResource(arr[myRandomValues][0])
-            b1!!.setOnClickListener {
+            guessBtn!!.setOnClickListener {
                 enteredText = autotextView.getText().toString()
 
                 todaysCountry = answers[myRandomValues]
@@ -175,7 +173,7 @@ class Daily : AppCompatActivity() {
                 // the setImageResource variable from the array of country images.
                 if (i < 4) {
                     i++
-                    numGuesses++;
+                    numGuesses++
                 }
                     iv!!.setImageResource(arr[myRandomValues][order[i]])
             }

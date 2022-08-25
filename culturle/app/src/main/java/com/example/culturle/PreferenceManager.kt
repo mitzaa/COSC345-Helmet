@@ -10,7 +10,7 @@ class PreferenceManager() {
 
     fun getStrValue(targetKey:String, context : Context) : String{
         val preference = context.getSharedPreferences(targetKey, Context.MODE_PRIVATE)
-        var returnString = preference.getString(targetKey, "DEFAULT")
+        val returnString = preference.getString(targetKey, "DEFAULT")
         return returnString.toString()
     }
 

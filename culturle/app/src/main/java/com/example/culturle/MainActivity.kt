@@ -20,7 +20,7 @@ open class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //Boolean which determines whether this game instance is Daily mode or Practice mode
-        var dailyMode = false;
+        var dailyMode = false
 
         val preferenceManager = PreferenceManager()
         val dateManager = DateManager()
@@ -43,15 +43,17 @@ open class MainActivity : AppCompatActivity() {
             if(preferenceManager.getIntValue("attemptedDaily", this) == 0) {
                 dailyMode = true
                 val intent = Intent(this, Daily::class.java)
-                intent.putExtra("dailyMode", dailyMode);
+                intent.putExtra("dailyMode", dailyMode)
                 startActivity(intent)
             } else {
+                ///////////////
                 dailyMode = true
                 val intent = Intent(this, EndScreen::class.java)
                 intent.putExtra("todaysCountry", "BRUH")
                 intent.putExtra("todaysFlag", "no")
                 intent.putExtra("dailyMode", dailyMode)
                 startActivity(intent)
+                //////////////////////////////////
             }
         }
         /*

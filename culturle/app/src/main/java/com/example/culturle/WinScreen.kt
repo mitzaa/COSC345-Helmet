@@ -23,30 +23,30 @@ class WinScreen : AppCompatActivity() {
 
         val dailyMode = intent.getBooleanExtra("dailyMode", false)
         if(dailyMode) {
-            var gamesWon = preferenceManager.getIntValue("gamesWon",this)
+            val gamesWon = preferenceManager.getIntValue("gamesWon",this)
             preferenceManager.setIntPreference("gamesWon",gamesWon + 1,this)
 
-            var totalGuesses = preferenceManager.getIntValue("totalGuesses", this) + (intent.getIntExtra("numGuesses", 0))
+            val totalGuesses = preferenceManager.getIntValue("totalGuesses", this) + (intent.getIntExtra("numGuesses", 0))
             preferenceManager.setIntPreference("totalGuesses", totalGuesses,this)
 
             preferenceManager.setIntPreference("isWinStreak",1,this)
-            var winStreak = preferenceManager.getIntValue("winStreak",this) + 1
+            val winStreak = preferenceManager.getIntValue("winStreak",this) + 1
             preferenceManager.setIntPreference("winStreak",winStreak,this)
-            var bestStreak = preferenceManager.getIntValue("bestStreak",this)
+            val bestStreak = preferenceManager.getIntValue("bestStreak",this)
             if(winStreak > bestStreak) {
                 preferenceManager.setIntPreference("bestStreak",winStreak,this)
             }
         }
 
-        val num_guesses_display = findViewById<View>(com.example.culturle.R.id.numGuessesView) as TextView
-        num_guesses_display.setText("Guesses: " + intent.getIntExtra("numGuesses", 0))
+        val numGuessesDisplay = findViewById<View>(R.id.numGuessesView) as TextView
+        numGuessesDisplay.setText("Guesses: " + intent.getIntExtra("numGuesses", 0))
         //val dateManager = DateManager()
         //num_guesses_display.setText("isNewDay " + dateManager.isNewDay(this) + "\n date: " + dateManager.getCurrentDate(this))
 
-        val todays_country_display = findViewById<View>(com.example.culturle.R.id.textView10) as TextView
-        todays_country_display.setText(intent.getStringExtra("todaysCountry"))
+        val todaysCountryDisplay = findViewById<View>(R.id.textView10) as TextView
+        todaysCountryDisplay.setText(intent.getStringExtra("todaysCountry"))
 
-        val todaysCountryFlag = findViewById<View>(com.example.culturle.R.id.countryFlagEnd) as ImageView
+        val todaysCountryFlag = findViewById<View>(R.id.countryFlagEnd) as ImageView
         val todaysArray = intent.getIntArrayExtra("todaysFlag")
         todaysCountryFlag.setImageResource(todaysArray!![1])
 

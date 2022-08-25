@@ -9,7 +9,7 @@ class DateManager {
     fun getActiveDate(context : Context): String {
         val activeDate = preferenceManager.getStrValue("activeDate", context)
         if(activeDate == "DEFAULT") {
-            var date = (Calendar.YEAR).toString() + (Calendar.MONTH).toString() + (Calendar.DAY_OF_MONTH).toString()
+            val date = (Calendar.YEAR).toString() + (Calendar.MONTH).toString() + (Calendar.DAY_OF_MONTH).toString()
             preferenceManager.setStrPreference("activeDate", date, context)
             preferenceManager.setStrPreference("currentDate", date, context)
         }
@@ -19,7 +19,7 @@ class DateManager {
     fun getCurrentDate(context : Context): String {
         val activeDate = preferenceManager.getStrValue("currentDate", context)
         if(activeDate == "DEFAULT") {
-            var date = (Calendar.YEAR).toString() + (Calendar.MONTH).toString() + (Calendar.DAY_OF_MONTH).toString()
+            val date = (Calendar.YEAR).toString() + (Calendar.MONTH).toString() + (Calendar.DAY_OF_MONTH).toString()
             preferenceManager.setStrPreference("currentDate", date, context)
         }
         return preferenceManager.getStrValue("currentDate", context)
@@ -27,7 +27,7 @@ class DateManager {
 
     fun updateDates(context : Context) {
         if(preferenceManager.getStrValue("currentDate", context) != preferenceManager.getStrValue("activeDate", context)) {
-            var date = (Calendar.YEAR).toString() + (Calendar.MONTH).toString() + (Calendar.DAY_OF_MONTH).toString()
+            val date = (Calendar.YEAR).toString() + (Calendar.MONTH).toString() + (Calendar.DAY_OF_MONTH).toString()
             preferenceManager.setStrPreference("activeDate", date, context)
             preferenceManager.setStrPreference("currentDate", date, context)
         }
