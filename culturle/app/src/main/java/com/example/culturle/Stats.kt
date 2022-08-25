@@ -6,6 +6,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import kotlin.math.roundToInt
+
 /**
  * Group Members: George Stewart ID: , Hayden Knox ID: , Hami Daly ID: , Marion Millard ID: , Micheal Young ID: ,
  * This class Object is the instance of a Game played by the user. Once the user clicks the play game button
@@ -16,11 +18,26 @@ class Stats : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stats)
 
+        var formatString = ""
         val preferenceManager = PreferenceManager()
 
-        val aveGuess = preferenceManager.getValue("totalGuesses",this)/preferenceManager.getValue("gamesPlayed",this)
+        var aveGuess = 0.0
+        var doubleGamesPlayed = preferenceManager.getValue("gamesPlayed",this).toDouble()
+        var doubleTotalGuesses = preferenceManager.getValue("totalGuesses", this).toDouble()
+        if(preferenceManager.getValue("gamesPlayed",this) != 0) {
+            aveGuess = ((doubleTotalGuesses / doubleGamesPlayed) * 100.0).roundToInt() / 100.0
+        }
         val aveGuessDisplay = findViewById<View>(com.example.culturle.R.id.aveGuessesView) as TextView
         aveGuessDisplay.setText("Average \n Guesses: \n" + aveGuess)
+
+        var winPercentage = 0
+        if(preferenceManager.getValue("gamesPlayed",this) != 0) {
+            val doubleGamesWon = preferenceManager.getValue("gamesWon", this).toDouble()
+            doubleGamesPlayed = preferenceManager.getValue("gamesPlayed", this).toDouble()
+            winPercentage = ((doubleGamesWon / doubleGamesPlayed) * 100.0).roundToInt()
+        }
+        val winPercentageDisplay = findViewById<View>(com.example.culturle.R.id.winPercentageView) as TextView
+        winPercentageDisplay.setText("Win %: \n " + winPercentage)
 
         val gamesPlayed = preferenceManager.getValue("gamesPlayed",this)
         val gamesPlayedDisplay = findViewById<View>(com.example.culturle.R.id.gamesPlayedView) as TextView
