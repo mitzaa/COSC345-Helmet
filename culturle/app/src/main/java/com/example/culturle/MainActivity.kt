@@ -1,7 +1,6 @@
 package com.example.culturle
 
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -22,6 +21,8 @@ open class MainActivity : AppCompatActivity() {
 
         //Boolean which determines whether this game instance is Daily mode or Practice mode
         var dailyMode = false;
+
+        //val calendar = Calendar.getInstance();
 
         /*
         * This button is used to direct game users to the GamePlay page so that users may play the game using their

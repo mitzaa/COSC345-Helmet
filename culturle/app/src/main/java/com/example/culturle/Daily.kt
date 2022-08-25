@@ -91,8 +91,8 @@ class Daily : AppCompatActivity() {
         var dailyMode = intent.getBooleanExtra("dailyMode", false)
         if(dailyMode) {
             val preferenceManager = PreferenceManager()
-            val gamesPlayed = preferenceManager.getValue("gamesPlayed",this)
-            preferenceManager.setPreference("gamesPlayed", gamesPlayed + 1,this)
+            val gamesPlayed = preferenceManager.getIntValue("gamesPlayed",this)
+            preferenceManager.setIntPreference("gamesPlayed", gamesPlayed + 1,this)
         }
 
         // This variable is dynamically used to produce a random int number for the 2-dimensional array based on the

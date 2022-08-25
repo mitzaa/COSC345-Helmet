@@ -23,18 +23,18 @@ class WinScreen : AppCompatActivity() {
 
         val dailyMode = intent.getBooleanExtra("dailyMode", false)
         if(dailyMode) {
-            var gamesWon = preferenceManager.getValue("gamesWon",this)
-            preferenceManager.setPreference("gamesWon",gamesWon + 1,this)
+            var gamesWon = preferenceManager.getIntValue("gamesWon",this)
+            preferenceManager.setIntPreference("gamesWon",gamesWon + 1,this)
 
-            var totalGuesses = preferenceManager.getValue("totalGuesses", this) + (intent.getIntExtra("numGuesses", 0))
-            preferenceManager.setPreference("totalGuesses", totalGuesses,this)
+            var totalGuesses = preferenceManager.getIntValue("totalGuesses", this) + (intent.getIntExtra("numGuesses", 0))
+            preferenceManager.setIntPreference("totalGuesses", totalGuesses,this)
 
-            preferenceManager.setPreference("isWinStreak",1,this)
-            var winStreak = preferenceManager.getValue("winStreak",this) + 1
-            preferenceManager.setPreference("winStreak",winStreak,this)
-            var bestStreak = preferenceManager.getValue("bestStreak",this)
+            preferenceManager.setIntPreference("isWinStreak",1,this)
+            var winStreak = preferenceManager.getIntValue("winStreak",this) + 1
+            preferenceManager.setIntPreference("winStreak",winStreak,this)
+            var bestStreak = preferenceManager.getIntValue("bestStreak",this)
             if(winStreak > bestStreak) {
-                preferenceManager.setPreference("bestStreak",winStreak,this)
+                preferenceManager.setIntPreference("bestStreak",winStreak,this)
             }
         }
 

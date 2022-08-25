@@ -23,11 +23,11 @@ class EndScreen : AppCompatActivity() {
 
         val dailyMode = intent.getBooleanExtra("dailyMode", false)
         if(dailyMode) {
-            var totalGuesses = (preferenceManager.getValue("totalGuesses", this) + 5)
-            preferenceManager.setPreference("totalGuesses", totalGuesses,this)
+            var totalGuesses = (preferenceManager.getIntValue("totalGuesses", this) + 5)
+            preferenceManager.setIntPreference("totalGuesses", totalGuesses,this)
 
-            preferenceManager.setPreference("isWinStreak",0,this)
-            preferenceManager.setPreference("winStreak", 0,this)
+            preferenceManager.setIntPreference("isWinStreak",0,this)
+            preferenceManager.setIntPreference("winStreak", 0,this)
         }
 
 
