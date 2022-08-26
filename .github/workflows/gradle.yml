@@ -87,7 +87,7 @@ jobs:
           path: /culturle/app/build/dokka/html
   
   Code_Coverage:  # https://github.com/arturdm/jacoco-android-gradle-plugin/blob/master/example/build.gradle
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: set up JDK 11
