@@ -29,7 +29,7 @@ class Daily : AppCompatActivity() {
     /*
     * These intArrayOf instances contain collections of images bound to the drawables folder.
     * Each instance of an intArrayOf represents a single country out of the soon to be 195 countries
-    * entered into thew game. As for the parameters of each game, each array folds five images
+    * entered into the game. As for the parameters of each game, each array holds five images
     * representing a feature associated with each answer country.
     */
     private val i001 = intArrayOf(R.drawable.i001_animal, R.drawable.i001_flag, R.drawable.i001_food, R.drawable.i001_lang,  R.drawable.i001_paint)
@@ -138,7 +138,7 @@ class Daily : AppCompatActivity() {
 
                 todaysCountry = answers[myRandomValues]
 
-                // These blocks of if and else statements are used to determine if the used has entered
+                // These blocks of if and else statements are used to determine if the user has entered
                 // a guess which results in a win or a loss that the user is directed to either the loss
                 // page of the game or then win page which displays the points and gains of their attempts.
                 if(enteredText == answers[myRandomValues]) {

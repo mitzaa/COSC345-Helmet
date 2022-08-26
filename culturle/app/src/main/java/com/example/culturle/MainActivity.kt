@@ -8,7 +8,7 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
 /**
- * Group Members: George Stewart ID: , Hayden Knox ID: 2485857 , Hami Daly ID: , Marion Millard ID: , Micheal Young ID: ,
+ * Group Members: George Stewart ID: , Hayden Knox ID: 2485857 , Hami Daly ID: , Marion Millard ID: 8335120 , Micheal Young ID: ,
  * This class Object is the instance of the home screen displayed when the app is run. From here the game user has a number
  * of UI components displayed to access different game features. From here Gameplay, Game practice, user states and user informaiton
  * is displayed for easy user access.
