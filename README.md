@@ -12,8 +12,10 @@ In order to run and test Cultural on your own device:
 2) In Android Studio open the file "app" (COSC345-Helmet/culturle/app)
 3) Create a device in "Device Manager" within Android Studio, search for and choose "Pixel 4a API 33". 
 4) Select the green hammer "Make Project" to build the app. 
-5) ![image](https://user-images.githubusercontent.com/97869940/186905801-83cd22b8-167a-47d4-938f-d939cb58300d.png) 
-The 'Run\Debug configuration' should resemble the image above. Run by pressing the green "Run app" button.
+5) The 'Run\Debug configuration' should resemble the image below. Run by pressing the green "Run app" button.
+
+![image](https://user-images.githubusercontent.com/97869940/186905801-83cd22b8-167a-47d4-938f-d939cb58300d.png) 
+
 
 Notes:
   SharedPreferences will be saved on the emulated device. The emulated device will need to be reset in order to reset the SharedPreferences for repeated testing.
