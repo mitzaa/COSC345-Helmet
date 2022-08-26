@@ -48,9 +48,7 @@ class Stats : AppCompatActivity() {
 
         val winStreak = preferenceManager.getIntValue("winStreak",this)
         val winStreakDisplay = findViewById<View>(R.id.winStreakView) as TextView
-        //winStreakDisplay.setText("Current \n Streak: \n" + winStreak)
-        val dateManager = DateManager()
-        winStreakDisplay.setText("Is new day: " + dateManager.isNewDay(this).toString() + "\nAttempted: " + preferenceManager.getIntValue("attemptedDaily", this))
+        winStreakDisplay.setText("Current \n Streak: \n" + winStreak)
 
         val bestStreak = preferenceManager.getIntValue("bestStreak",this)
         val bestStreakDisplay = findViewById<View>(R.id.bestStreakView) as TextView
