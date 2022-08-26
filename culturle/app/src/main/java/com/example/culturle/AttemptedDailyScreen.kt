@@ -6,6 +6,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 
+/**
+ * This class is called when a user attempts to play Daily mode more than once per day. If the user attempts to play daily mode once in a day,
+ * this screen is displayed.
+ */
 class AttemptedDailyScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

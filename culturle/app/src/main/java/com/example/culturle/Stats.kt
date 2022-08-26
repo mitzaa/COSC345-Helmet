@@ -9,9 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlin.math.roundToInt
 
 /**
- * Group Members: George Stewart ID: , Hayden Knox ID: , Hami Daly ID: , Marion Millard ID: , Micheal Young ID: ,
- * This class Object is the instance of a Game played by the user. Once the user clicks the play game button
- * from the main screen an instance of this class is created and the program is executed.
+ * This class Object retrieves, calculates, displays the user's stats from Daily mode. It shows Average Guesses,
+ * Win Percentage, Games Played, Games Won, Win Streak, and Best Streak.
  */
 class Stats : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
