@@ -19,6 +19,8 @@ open class MainActivity : AppCompatActivity() {
         //Set the screen to the activity_main.xml
         setContentView(R.layout.activity_main)
 
+        //Doc Test
+
         //Boolean which determines whether this game instance is Daily mode or Practice mode
         var dailyMode = false
 
