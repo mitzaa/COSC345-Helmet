@@ -7,6 +7,8 @@ The team at Helmet is excited to release our first functioning version of Cultur
 Culturle is written in Kotlin, for Android, and is designed to run optimally on a Pixel 4a API 33.
 Our proposed questionaire for volunteer testers can be found in the file Questionaire.pdf.
 
+In order to run and test Cultural on your own device: 1) Download the repo, 2) In Android Studio open the file "app" (COSC345-Helmet/culturle/app), 3) Create a device in "Device Manager" within Android Studio, search for and choose "Pixel 4a API 33". 4) Select the green hammer "Make Project" to build the app. 5) ![image](https://user-images.githubusercontent.com/97869940/186905801-83cd22b8-167a-47d4-938f-d939cb58300d.png) Run by pressing this green "Run app" button.
+
 
 Known issues to be addressed asap:
   Generating documentation has drastically lowered our code quality as measured by Codacy.
