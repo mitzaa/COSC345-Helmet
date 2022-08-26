@@ -11,9 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
 /**
- * Group Members: George Stewart ID: , Hayden Knox ID: , Hami Daly ID: , Marion Millard ID: , Micheal Young ID: ,
  * This class Object is the instance of a Game played by the user. Once the user clicks the play game button
- * from the main screen an instance of this class is created and the program is executed.
+ * from the main screen an instance of this class is created and the program is executed. The boolean
+ * variable dailyMode determines if this game is counts as Daily or Practice.
  */
 class Daily : AppCompatActivity() {
     /*
@@ -75,14 +75,7 @@ class Daily : AppCompatActivity() {
     private var numGuesses = 1
     private var enteredText = "NONE"
     var todaysCountry = "NONE"
-    //private lateinit var binding: Daily
 
-    /**
-     * @param: Bundle
-     * This class instance is used to collect and tally user scores in a separate file which will
-     * record statistical information related to the game users skills and progress.
-     * Including: Games played Total, Games Won Total, Games Lost Total and User points score
-     */
     override fun onCreate(savedInstanceState: Bundle?) {
         // creates a random index column number for the 2-dimensional array so a country entry containing
         // images is chosen at random.
@@ -95,8 +88,6 @@ class Daily : AppCompatActivity() {
             preferenceManager.setIntPreference("gamesPlayed", gamesPlayed + 1,this)
             preferenceManager.setIntPreference("attemptedDaily", 1, this)
         }
-
-        //if(dailyMode && dateManager.isNewDay())
 
         // This variable is dynamically used to produce a random int number for the 2-dimensional array based on the
         // number of elements it contains. This variable number range will be updated when the completion of more countries can be

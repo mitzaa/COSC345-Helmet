@@ -9,7 +9,6 @@ import android.widget.ImageView
 import android.widget.TextView
 
 /**
- * Group Members: George Stewart ID: , Hayden Knox ID: , Hami Daly ID: , Marion Millard ID: , Micheal Young ID: ,
  * This class Object is the instance of a Winning screen created by the user successfully completing a game.
  * Once the user clicks the play game button from the main screen an instance of this class is created only when
  * the user guesses the answer country before the guess counter reaches its maximum.

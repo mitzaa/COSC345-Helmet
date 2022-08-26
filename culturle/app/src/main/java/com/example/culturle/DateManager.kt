@@ -5,6 +5,10 @@ import java.util.Calendar
 
 val preferenceManager = PreferenceManager()
 
+/**
+ * A class which uses PreferenceManager and Calendar to track and modify the currentDate and
+ * the activeDate being used by the application.
+ */
 class DateManager {
     fun getActiveDate(context : Context): String {
         val activeDate = preferenceManager.getStrValue("activeDate", context)
