@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 /**
  * This class Object is the instance of the home screen displayed when the app is run. From here the user has a number
  * of UI components displayed to access different game features. From here daily games, practice games, user stats and user informaiton
- * are displayed for easy access by the user.
+ * are displayed for easy access by the user. testing
  */
 open class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle ? ) {
