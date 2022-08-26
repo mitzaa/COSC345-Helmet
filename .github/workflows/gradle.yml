@@ -84,5 +84,4 @@ jobs:
       with:
           name: KDoc Documentation Site
     #      working-directory: ./culturle
-          working-directory: ./culturle
-          path: app/build/dokka/html
+          path: /culturle/app/build/dokka/html
