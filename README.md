@@ -10,7 +10,7 @@ Our proposed questionaire for volunteer testers can be found in the file Questio
 
 Known issues to be addressed asap:
   Generating documentation has drastically lowered our code quality as measured by Codacy.
-  CodeCov is linked to our repo but isn't functional yet
-  Much of our code is lacking comparmentalisation in the form of methods
+  Documentation had been generated but isn't hosted on GitHub pages yet.
+  
   
   
