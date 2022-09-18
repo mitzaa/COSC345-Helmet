@@ -5,7 +5,7 @@ import android.content.Context
 /**
  * A class which manages local storage of variables on the device using SharedPreferences.
  */
-class PreferenceManager() {
+class PreferenceManager {
     fun getIntValue(targetKey:String, context : Context) : Int{
         val preference = context.getSharedPreferences(targetKey, Context.MODE_PRIVATE)
         return preference.getInt(targetKey, 0)

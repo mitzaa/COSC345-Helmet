@@ -8,7 +8,6 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import java.lang.Math.*
 import java.util.*
-import kotlin.math.pow
 import kotlin.math.PI
 
 /**
@@ -638,7 +637,7 @@ class Daily : AppCompatActivity() {
     * Each answer is matched to the array of countries per index for chronological orders sake of organisation.
     * More String answer elements will be added in the future.
      */
-    var answers = arrayOf<String>("Afghanistan", "Chad", "Congo", "Eritrea", "France", "Guatemala", "Mexico", "Mongolia", "New Zealand", "Nigeria", "Switzerland", "United Kingdom", "United States")
+    var answers = arrayOf("Afghanistan", "Chad", "Congo", "Eritrea", "France", "Guatemala", "Mexico", "Mongolia", "New Zealand", "Nigeria", "Switzerland", "United Kingdom", "United States")
 
     /*
     * Variables:
@@ -694,18 +693,19 @@ class Daily : AppCompatActivity() {
                 enteredText = autotextView.getText().toString()
                 //val enteredText = getString(R.string.submitted_country) + " " + autotextView.getText()
             })
-            val autotextView = findViewById<AutoCompleteTextView>(R.id.autoTextView)
-            val countries = resources.getStringArray(R.array.Countries)
-            val adapter = ArrayAdapter(
+            val textView = findViewById<AutoCompleteTextView>(R.id.autoTextView)
+            val countryResources = resources.getStringArray(R.array.Countries)
+            val countryAdapter = ArrayAdapter(
                 this,
-                android.R.layout.simple_list_item_1, countries
+                android.R.layout.simple_list_item_1, countryResources
             )
-            autotextView.setAdapter(adapter)
+            textView.setAdapter(countryAdapter)
             flag = true
             //b1 = findViewById<View>(R.id.guessButton) as Button
             iv = findViewById<View>(R.id.hintImage) as ImageView?
             iv!!.setImageResource(arr[myRandomValues][0])
-            guessBtn!!.setOnClickListener {
+            guessBtn.setOnClickListener {
+                //guessBtn!!.setOnClickListener {
                 enteredText = autotextView.getText().toString()
 
                 todaysCountry = answers[myRandomValues]
@@ -727,11 +727,11 @@ class Daily : AppCompatActivity() {
                 else{
                     // if this if statement condition results as a False Boolean value, the incorrect
                     // answer is removed from the text box component.
-                    autotextView.getText().clear()
-                    var lat1 = countryCoordArr[1][0];
-                    var lon1 = countryCoordArr[1][1];
-                    var lat2 = countryCoordArr[6][0];
-                    var lon2 = countryCoordArr[6][1];
+                    textView.getText().clear()
+                    val lat1 = countryCoordArr[1][0]
+                    val lon1 = countryCoordArr[1][1]
+                    val lat2 = countryCoordArr[6][0]
+                    val lon2 = countryCoordArr[6][1]
                     val guessDistance = findViewById<View>(R.id.distGuess) as TextView
                     val distance = calcDistance(lat1,lon1,lat2,lon2)
                     guessDistance.setText("Distance Away: ~" + distance.toInt() + "km")
@@ -760,17 +760,17 @@ class Daily : AppCompatActivity() {
     }
 
     fun calcDistance(lat1 : Double, lon1 : Double, lat2 : Double, lon2 : Double) : Double {
-        var R = 6371; // Radius of the earth in km
-        var dLat = deg2rad(lat2-lat1);  // deg2rad below
-        var dLon = deg2rad(lon2-lon1);
-        var a =
+        val r = 6371 // Radius of the earth in km
+        val dLat = deg2rad(lat2-lat1)  // deg2rad below
+        val dLon = deg2rad(lon2-lon1)
+        val a =
             sin(dLat/2) * sin(dLat/2) +
                     cos(deg2rad(lat1)) * cos(deg2rad(lat2)) *
                     sin(dLon/2) * sin(dLon/2)
-        ;
-        var c = 2 * atan2(sqrt(a), sqrt(1-a));
-        var d = R * c; // Distance in km
-        return d;
+
+        val c = 2 * atan2(sqrt(a), sqrt(1-a))
+        val d = r * c // Distance in km
+        return d
     }
 
     fun deg2rad(deg : Double) : Double {

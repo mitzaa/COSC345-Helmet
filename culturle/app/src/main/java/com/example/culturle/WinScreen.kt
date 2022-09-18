@@ -38,10 +38,10 @@ class WinScreen : AppCompatActivity() {
         }
 
         val numGuessesDisplay = findViewById<View>(R.id.numGuessesView) as TextView
-        numGuessesDisplay.setText("Guesses: " + intent.getIntExtra("numGuesses", 0))
+        numGuessesDisplay.text = "Guesses: " + intent.getIntExtra("numGuesses", 0)
 
         val todaysCountryDisplay = findViewById<View>(R.id.textView10) as TextView
-        todaysCountryDisplay.setText(intent.getStringExtra("todaysCountry"))
+        todaysCountryDisplay.text = intent.getStringExtra("todaysCountry")
 
         val todaysCountryFlag = findViewById<View>(R.id.countryFlagEnd) as ImageView
         val todaysArray = intent.getIntArrayExtra("todaysFlag")
