@@ -90,10 +90,8 @@ open class MainActivity : AppCompatActivity() {
     fun checkAndUpdateDateVariables() {
         val preferenceManager = PreferenceManager()
         val dateManager = DateManager()
-        dateManager.getCurrentDate(this)
         if(dateManager.isNewDay(this)) {
             preferenceManager.setIntPreference("attemptedDaily", 0, this)
-            dateManager.updateDates(this)
         }
     }
 }
