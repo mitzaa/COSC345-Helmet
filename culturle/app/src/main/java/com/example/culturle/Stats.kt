@@ -26,7 +26,8 @@ class Stats : AppCompatActivity() {
             aveGuess = ((doubleTotalGuesses / doubleGamesPlayed) * 100.0).roundToInt() / 100.0
         }
         val aveGuessDisplay = findViewById<View>(R.id.aveGuessesView) as TextView
-        aveGuessDisplay.text = "Average \n Guesses: \n$aveGuess"
+        var textToDisplay = "Average \n Guesses: \n$aveGuess"
+        aveGuessDisplay.text = textToDisplay
 
         var winPercentage = 0
         if(preferenceManager.getIntValue("gamesPlayed",this) != 0) {
@@ -35,23 +36,28 @@ class Stats : AppCompatActivity() {
             winPercentage = ((doubleGamesWon / doubleGamesPlayed) * 100.0).roundToInt()
         }
         val winPercentageDisplay = findViewById<View>(R.id.winPercentageView) as TextView
-        winPercentageDisplay.text ="Win %: \n $winPercentage"
+        textToDisplay = "Win %: \n $winPercentage"
+        winPercentageDisplay.text = textToDisplay
 
         val gamesPlayed = preferenceManager.getIntValue("gamesPlayed",this)
         val gamesPlayedDisplay = findViewById<View>(R.id.gamesPlayedView) as TextView
-        gamesPlayedDisplay.text = "Games \n Played: \n$gamesPlayed"
+        textToDisplay = "Games \n Played: \n$gamesPlayed"
+        gamesPlayedDisplay.text = textToDisplay
 
         val gamesWon = preferenceManager.getIntValue("gamesWon",this)
         val gamesWonDisplay = findViewById<View>(R.id.gamesWonView) as TextView
-        gamesWonDisplay.text = "Games \n Won: \n$gamesWon"
+        textToDisplay = "Games \n Won: \n$gamesWon"
+        gamesWonDisplay.text = textToDisplay
 
         val winStreak = preferenceManager.getIntValue("winStreak",this)
         val winStreakDisplay = findViewById<View>(R.id.winStreakView) as TextView
-        winStreakDisplay.text = "Current \n Streak: \n$winStreak"
+        textToDisplay = "Current \n Streak: \n$winStreak"
+        winStreakDisplay.text = textToDisplay
 
         val bestStreak = preferenceManager.getIntValue("bestStreak",this)
         val bestStreakDisplay = findViewById<View>(R.id.bestStreakView) as TextView
-        bestStreakDisplay.text = "Best \n Streak: \n$bestStreak"
+        textToDisplay = "Best \n Streak: \n$bestStreak"
+        bestStreakDisplay.text = textToDisplay
 
         //Set button object to the practiceButton id
         val homeButtonObj: Button = findViewById<View>(R.id.homeStatsButton) as Button

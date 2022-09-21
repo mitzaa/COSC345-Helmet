@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import java.lang.Math.*
 import java.util.*
 import kotlin.math.PI
 
@@ -426,7 +425,7 @@ class Daily : AppCompatActivity() {
     //private val i195 = intArrayOf(R.drawable.i195_animal, R.drawable.i195_flag, R.drawable.i195_food, R.drawable.i195_lang,  R.drawable.i195_paint)
 
 
-    val countryCoordArr = arrayOf(
+    private val countryCoordArr = arrayOf(
         arrayOf(33.9391, 67.709953),
         arrayOf(41.15333, 20.168331),
         arrayOf(28.03388, 1.659626),
@@ -625,19 +624,19 @@ class Daily : AppCompatActivity() {
         )
 
     // Order of the hints to be shown
-    var order = intArrayOf(0, 4, 2, 3, 1)
+    private var order = intArrayOf(0, 4, 2, 3, 1)
     /*
     * For the simplicity of randomly selecting an answer country without a pattern. The country entries
     * are added as elements in a 2-Dimensional array. Each variable such as "i001" is a country within
     * the array, along with their associated images.
     */
-    var arr = arrayOf(i001, i035, i040, i055, i061, i069, i111, i115, i124, i127, i170, i186, i187)
+    private var arr = arrayOf(i001, i035, i040, i055, i061, i069, i111, i115, i124, i127, i170, i186, i187)
     /*
     * This array of Strings contains all of the corresponding text answers for each country.
     * Each answer is matched to the array of countries per index for chronological orders sake of organisation.
     * More String answer elements will be added in the future.
      */
-    var answers = arrayOf("Afghanistan", "Chad", "Congo", "Eritrea", "France", "Guatemala", "Mexico", "Mongolia", "New Zealand", "Nigeria", "Switzerland", "United Kingdom", "United States")
+    private var answers = arrayOf("Afghanistan", "Chad", "Congo", "Eritrea", "France", "Guatemala", "Mexico", "Mongolia", "New Zealand", "Nigeria", "Switzerland", "United Kingdom", "United States")
 
     /*
     * Variables:
@@ -652,7 +651,7 @@ class Daily : AppCompatActivity() {
     private var i = 0
     private var numGuesses = 1
     private var enteredText = "NONE"
-    var todaysCountry = "NONE"
+    private var todaysCountry = "NONE"
 
 
     @SuppressLint("SetTextI18n")
@@ -689,11 +688,12 @@ class Daily : AppCompatActivity() {
         // This if statement block is used to compare the guess country entered by the user
         // to the country held as an answer by the game
         if (guessBtn != null) {
-            guessBtn.setOnClickListener(View.OnClickListener {
-                enteredText = autotextView.getText().toString()
+            guessBtn.setOnClickListener{
+                enteredText = autotextView.text.toString()
                 //val enteredText = getString(R.string.submitted_country) + " " + autotextView.getText()
-            })
-            val textView = findViewById<AutoCompleteTextView>(R.id.autoTextView)
+            }
+            val textView = autotextView
+            //val textView = findViewById<AutoCompleteTextView>(R.id.autoTextView)
             val countryResources = resources.getStringArray(R.array.Countries)
             val countryAdapter = ArrayAdapter(
                 this,
@@ -706,7 +706,7 @@ class Daily : AppCompatActivity() {
             iv!!.setImageResource(arr[myRandomValues][0])
             guessBtn.setOnClickListener {
                 //guessBtn!!.setOnClickListener {
-                enteredText = autotextView.getText().toString()
+                enteredText = autotextView.text.toString()
 
                 todaysCountry = answers[myRandomValues]
 
@@ -727,14 +727,14 @@ class Daily : AppCompatActivity() {
                 else{
                     // if this if statement condition results as a False Boolean value, the incorrect
                     // answer is removed from the text box component.
-                    textView.getText().clear()
+                    textView.text.clear()
                     val lat1 = countryCoordArr[1][0]
                     val lon1 = countryCoordArr[1][1]
                     val lat2 = countryCoordArr[6][0]
                     val lon2 = countryCoordArr[6][1]
                     val guessDistance = findViewById<View>(R.id.distGuess) as TextView
                     val distance = calcDistance(lat1,lon1,lat2,lon2)
-                    guessDistance.setText("Distance Away: ~" + distance.toInt() + "km")
+                    guessDistance.text = "Distance Away: ~" + distance.toInt() + "km"
                 }
                 // This if statement executes if the maximum number of guesses has been attempted per
                 // daily game. if the iterator variable for the number of games is equal to 5 the game
@@ -759,21 +759,21 @@ class Daily : AppCompatActivity() {
         }
     }
 
-    fun calcDistance(lat1 : Double, lon1 : Double, lat2 : Double, lon2 : Double) : Double {
+    private fun calcDistance(lat1 : Double, lon1 : Double, lat2 : Double, lon2 : Double) : Double {
         val r = 6371 // Radius of the earth in km
         val dLat = deg2rad(lat2-lat1)  // deg2rad below
         val dLon = deg2rad(lon2-lon1)
         val a =
-            sin(dLat/2) * sin(dLat/2) +
-                    cos(deg2rad(lat1)) * cos(deg2rad(lat2)) *
-                    sin(dLon/2) * sin(dLon/2)
+            kotlin.math.sin(dLat / 2) * kotlin.math.sin(dLat / 2) +
+                    kotlin.math.cos(deg2rad(lat1)) * kotlin.math.cos(deg2rad(lat2)) *
+                    kotlin.math.sin(dLon / 2) * kotlin.math.sin(dLon / 2)
 
-        val c = 2 * atan2(sqrt(a), sqrt(1-a))
+        val c = 2 * kotlin.math.atan2(kotlin.math.sqrt(a), kotlin.math.sqrt(1 - a))
         val d = r * c // Distance in km
         return d
     }
 
-    fun deg2rad(deg : Double) : Double {
+    private fun deg2rad(deg : Double) : Double {
         return deg * (PI/180)
     }
 }
