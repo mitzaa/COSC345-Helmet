@@ -36,183 +36,183 @@ class Daily : AppCompatActivity() {
     //<item>Afghanistan<item>
     private val i001 = intArrayOf(R.drawable.i001_animal, R.drawable.i001_flag, R.drawable.i001_food, R.drawable.i001_lang,  R.drawable.i001_paint)
     //<item>Albania<item>
-    //private val i002 = intArrayOf(R.drawable.i002_animal, R.drawable.i002_flag, R.drawable.i002_food, R.drawable.i002_lang,  R.drawable.i002_paint)
+    private val i002 = intArrayOf(R.drawable.i002_animal, R.drawable.i002_flag, R.drawable.i002_food, R.drawable.i002_lang,  R.drawable.i002_paint)
     //<item>Algeria<item>
-    //private val i003 = intArrayOf(R.drawable.i003_animal, R.drawable.i003_flag, R.drawable.i003_food, R.drawable.i003_lang,  R.drawable.i003_paint)
+    private val i003 = intArrayOf(R.drawable.i003_animal, R.drawable.i003_flag, R.drawable.i003_food, R.drawable.i003_lang,  R.drawable.i003_paint)
     //<item>Andorra<item>
-    //private val i004 = intArrayOf(R.drawable.i004_animal, R.drawable.i004_flag, R.drawable.i004_food, R.drawable.i004_lang,  R.drawable.i004_paint)
+    private val i004 = intArrayOf(R.drawable.i004_animal, R.drawable.i004_flag, R.drawable.i004_food, R.drawable.i004_lang,  R.drawable.i004_paint)
     //<item>Angola<item>
-    //private val i005 = intArrayOf(R.drawable.i005_animal, R.drawable.i005_flag, R.drawable.i005_food, R.drawable.i005_lang,  R.drawable.i005_paint)
+    private val i005 = intArrayOf(R.drawable.i005_animal, R.drawable.i005_flag, R.drawable.i005_food, R.drawable.i005_lang,  R.drawable.i005_paint)
     //<item>Antigua and Barbuda<item>
-    //private val i006 = intArrayOf(R.drawable.i006_animal, R.drawable.i006_flag, R.drawable.i006_food, R.drawable.i006_lang,  R.drawable.i006_paint)
+    private val i006 = intArrayOf(R.drawable.i006_animal, R.drawable.i006_flag, R.drawable.i006_food, R.drawable.i006_lang,  R.drawable.i006_paint)
     //<item>Argentina<item>
     //private val i007 = intArrayOf(R.drawable.i007_animal, R.drawable.i007_flag, R.drawable.i007_food, R.drawable.i007_lang,  R.drawable.i007_paint)
     //<item>Armenia<item>
-    //private val i008 = intArrayOf(R.drawable.i008_animal, R.drawable.i008_flag, R.drawable.i008_food, R.drawable.i008_lang,  R.drawable.i008_paint)
+    private val i008 = intArrayOf(R.drawable.i008_animal, R.drawable.i008_flag, R.drawable.i008_food, R.drawable.i008_lang,  R.drawable.i008_paint)
     //<item>Australia<item>
-    //private val i009 = intArrayOf(R.drawable.i009_animal, R.drawable.i009_flag, R.drawable.i009_food, R.drawable.i009_lang,  R.drawable.i009_paint)
+    private val i009 = intArrayOf(R.drawable.i009_animal, R.drawable.i009_flag, R.drawable.i009_food, R.drawable.i009_lang,  R.drawable.i009_paint)
     //<item>Austria<item>
-    //private val i010 = intArrayOf(R.drawable.i010_animal, R.drawable.i010_flag, R.drawable.i010_food, R.drawable.i010_lang,  R.drawable.i010_paint)
+    private val i010 = intArrayOf(R.drawable.i010_animal, R.drawable.i010_flag, R.drawable.i010_food, R.drawable.i010_lang,  R.drawable.i010_paint)
     //<item>Azerbaijan<item>
-    //private val i011 = intArrayOf(R.drawable.i011_animal, R.drawable.i011_flag, R.drawable.i011_food, R.drawable.i011_lang,  R.drawable.i011_paint)
+    private val i011 = intArrayOf(R.drawable.i011_animal, R.drawable.i011_flag, R.drawable.i011_food, R.drawable.i011_lang,  R.drawable.i011_paint)
     //<item>Bahamas<item>
-    //private val i012 = intArrayOf(R.drawable.i012_animal, R.drawable.i012_flag, R.drawable.i012_food, R.drawable.i012_lang,  R.drawable.i012_paint)
+    private val i012 = intArrayOf(R.drawable.i012_animal, R.drawable.i012_flag, R.drawable.i012_food, R.drawable.i012_lang,  R.drawable.i012_paint)
     //<item>Bahrain<item>
-    //private val i013 = intArrayOf(R.drawable.i013_animal, R.drawable.i013_flag, R.drawable.i013_food, R.drawable.i013_lang,  R.drawable.i013_paint)
+    private val i013 = intArrayOf(R.drawable.i013_animal, R.drawable.i013_flag, R.drawable.i013_food, R.drawable.i013_lang,  R.drawable.i013_paint)
     //<item>Bangladesh<item>
-    //private val i014 = intArrayOf(R.drawable.i014_animal, R.drawable.i014_flag, R.drawable.i014_food, R.drawable.i014_lang,  R.drawable.i014_paint)
+    private val i014 = intArrayOf(R.drawable.i014_animal, R.drawable.i014_flag, R.drawable.i014_food, R.drawable.i014_lang,  R.drawable.i014_paint)
     //<item>Barbados<item>
-    //private val i015 = intArrayOf(R.drawable.i015_animal, R.drawable.i015_flag, R.drawable.i015_food, R.drawable.i015_lang,  R.drawable.i015_paint)
+    private val i015 = intArrayOf(R.drawable.i015_animal, R.drawable.i015_flag, R.drawable.i015_food, R.drawable.i015_lang,  R.drawable.i015_paint)
     //<item>Belarus<item>
-    //private val i016 = intArrayOf(R.drawable.i016_animal, R.drawable.i016_flag, R.drawable.i016_food, R.drawable.i016_lang,  R.drawable.i016_paint)
+    private val i016 = intArrayOf(R.drawable.i016_animal, R.drawable.i016_flag, R.drawable.i016_food, R.drawable.i016_lang,  R.drawable.i016_paint)
     //<item>Belgium<item>
-    //private val i017 = intArrayOf(R.drawable.i017_animal, R.drawable.i017_flag, R.drawable.i017_food, R.drawable.i017_lang,  R.drawable.i017_paint)
+    private val i017 = intArrayOf(R.drawable.i017_animal, R.drawable.i017_flag, R.drawable.i017_food, R.drawable.i017_lang,  R.drawable.i017_paint)
     //<item>Belize<item>
-    //private val i018 = intArrayOf(R.drawable.i018_animal, R.drawable.i018_flag, R.drawable.i018_food, R.drawable.i018_lang,  R.drawable.i018_paint)
+    private val i018 = intArrayOf(R.drawable.i018_animal, R.drawable.i018_flag, R.drawable.i018_food, R.drawable.i018_lang,  R.drawable.i018_paint)
     //<item>Benin<item>
-    //private val i019 = intArrayOf(R.drawable.i019_animal, R.drawable.i019_flag, R.drawable.i019_food, R.drawable.i019_lang,  R.drawable.i019_paint)
+    private val i019 = intArrayOf(R.drawable.i019_animal, R.drawable.i019_flag, R.drawable.i019_food, R.drawable.i019_lang,  R.drawable.i019_paint)
     //<item>Bhutan<item>
-    //private val i020 = intArrayOf(R.drawable.i020_animal, R.drawable.i020_flag, R.drawable.i020_food, R.drawable.i020_lang,  R.drawable.i020_paint)
+    private val i020 = intArrayOf(R.drawable.i020_animal, R.drawable.i020_flag, R.drawable.i020_food, R.drawable.i020_lang,  R.drawable.i020_paint)
     //<item>Bolivia<item>
-    //private val i021 = intArrayOf(R.drawable.i021_animal, R.drawable.i021_flag, R.drawable.i021_food, R.drawable.i021_lang,  R.drawable.i021_paint)
+    private val i021 = intArrayOf(R.drawable.i021_animal, R.drawable.i021_flag, R.drawable.i021_food, R.drawable.i021_lang,  R.drawable.i021_paint)
     //<item>Bosnia and Herzegovina<item>
-    //private val i022 = intArrayOf(R.drawable.i022_animal, R.drawable.i022_flag, R.drawable.i022_food, R.drawable.i022_lang,  R.drawable.i022_paint)
+    private val i022 = intArrayOf(R.drawable.i022_animal, R.drawable.i022_flag, R.drawable.i022_food, R.drawable.i022_lang,  R.drawable.i022_paint)
     //<item>Botswana<item>
-    //private val i023 = intArrayOf(R.drawable.i023_animal, R.drawable.i023_flag, R.drawable.i023_food, R.drawable.i023_lang,  R.drawable.i023_paint)
+    private val i023 = intArrayOf(R.drawable.i023_animal, R.drawable.i023_flag, R.drawable.i023_food, R.drawable.i023_lang,  R.drawable.i023_paint)
     //<item>Brazil<item>
-    //private val i024 = intArrayOf(R.drawable.i024_animal, R.drawable.i024_flag, R.drawable.i024_food, R.drawable.i024_lang,  R.drawable.i024_paint)
+    private val i024 = intArrayOf(R.drawable.i024_animal, R.drawable.i024_flag, R.drawable.i024_food, R.drawable.i024_lang,  R.drawable.i024_paint)
     //<item>Brunei<item>
-    //private val i025 = intArrayOf(R.drawable.i025_animal, R.drawable.i025_flag, R.drawable.i025_food, R.drawable.i025_lang,  R.drawable.i025_paint)
+    private val i025 = intArrayOf(R.drawable.i025_animal, R.drawable.i025_flag, R.drawable.i025_food, R.drawable.i025_lang,  R.drawable.i025_paint)
     //<item>Bulgaria<item>
     //private val i026 = intArrayOf(R.drawable.i026_animal, R.drawable.i026_flag, R.drawable.i026_food, R.drawable.i026_lang,  R.drawable.i026_paint)
     //<item>Burkina Faso<item>
-    //private val i027 = intArrayOf(R.drawable.i027_animal, R.drawable.i027_flag, R.drawable.i027_food, R.drawable.i027_lang,  R.drawable.i027_paint)
+    private val i027 = intArrayOf(R.drawable.i027_animal, R.drawable.i027_flag, R.drawable.i027_food, R.drawable.i027_lang,  R.drawable.i027_paint)
     //<item>Burundi<item>
-    //private val i028 = intArrayOf(R.drawable.i028_animal, R.drawable.i028_flag, R.drawable.i028_food, R.drawable.i028_lang,  R.drawable.i028_paint)
+    private val i028 = intArrayOf(R.drawable.i028_animal, R.drawable.i028_flag, R.drawable.i028_food, R.drawable.i028_lang,  R.drawable.i028_paint)
     //<item>Côte d'Ivoire<item>
-    //private val i029 = intArrayOf(R.drawable.i029_animal, R.drawable.i029_flag, R.drawable.i029_food, R.drawable.i029_lang,  R.drawable.i029_paint)
+    private val i029 = intArrayOf(R.drawable.i029_animal, R.drawable.i029_flag, R.drawable.i029_food, R.drawable.i029_lang,  R.drawable.i029_paint)
     //<item>Cabo Verde<item>
-    //private val i030 = intArrayOf(R.drawable.i030_animal, R.drawable.i030_flag, R.drawable.i030_food, R.drawable.i030_lang,  R.drawable.i030_paint)
+    private val i030 = intArrayOf(R.drawable.i030_animal, R.drawable.i030_flag, R.drawable.i030_food, R.drawable.i030_lang,  R.drawable.i030_paint)
     //<item>Cambodia<item>
-    //private val i031 = intArrayOf(R.drawable.i031_animal, R.drawable.i031_flag, R.drawable.i031_food, R.drawable.i031_lang,  R.drawable.i031_paint)
+    private val i031 = intArrayOf(R.drawable.i031_animal, R.drawable.i031_flag, R.drawable.i031_food, R.drawable.i031_lang,  R.drawable.i031_paint)
     //<item>Cameroon<item>
-    //private val i032 = intArrayOf(R.drawable.i032_animal, R.drawable.i032_flag, R.drawable.i032_food, R.drawable.i032_lang,  R.drawable.i032_paint)
+    private val i032 = intArrayOf(R.drawable.i032_animal, R.drawable.i032_flag, R.drawable.i032_food, R.drawable.i032_lang,  R.drawable.i032_paint)
     //<item>Canada<item>
-    //private val i033 = intArrayOf(R.drawable.i033_animal, R.drawable.i033_flag, R.drawable.i033_food, R.drawable.i033_lang,  R.drawable.i033_paint)
+    private val i033 = intArrayOf(R.drawable.i033_animal, R.drawable.i033_flag, R.drawable.i033_food, R.drawable.i033_lang,  R.drawable.i033_paint)
     //<item>Central African Republic<item>
-    //private val i034 = intArrayOf(R.drawable.i034_animal, R.drawable.i034_flag, R.drawable.i034_food, R.drawable.i034_lang,  R.drawable.i034_paint)
+    private val i034 = intArrayOf(R.drawable.i034_animal, R.drawable.i034_flag, R.drawable.i034_food, R.drawable.i034_lang,  R.drawable.i034_paint)
     //<item>Chad<item>
     private val i035 = intArrayOf(R.drawable.i035_animal, R.drawable.i035_flag, R.drawable.i035_food, R.drawable.i035_lang,  R.drawable.i035_paint)
     //<item>Chile<item>
-    //private val i036 = intArrayOf(R.drawable.i036_animal, R.drawable.i036_flag, R.drawable.i036_food, R.drawable.i036_lang,  R.drawable.i036_paint)
+    private val i036 = intArrayOf(R.drawable.i036_animal, R.drawable.i036_flag, R.drawable.i036_food, R.drawable.i036_lang,  R.drawable.i036_paint)
     //<item>China<item>
     //private val i037 = intArrayOf(R.drawable.i037_animal, R.drawable.i037_flag, R.drawable.i037_food, R.drawable.i037_lang,  R.drawable.i037_paint)
     //<item>Colombia<item>
     //private val i038 = intArrayOf(R.drawable.i038_animal, R.drawable.i038_flag, R.drawable.i038_food, R.drawable.i038_lang,  R.drawable.i038_paint)
     //<item>Comoros<item>
-    //private val i039 = intArrayOf(R.drawable.i039_animal, R.drawable.i039_flag, R.drawable.i039_food, R.drawable.i039_lang,  R.drawable.i039_paint)
+    private val i039 = intArrayOf(R.drawable.i039_animal, R.drawable.i039_flag, R.drawable.i039_food, R.drawable.i039_lang,  R.drawable.i039_paint)
     //<item>Congo (Congo-Brazzaville)<item>
     private val i040 = intArrayOf(R.drawable.i040_animal, R.drawable.i040_flag, R.drawable.i040_food, R.drawable.i040_lang,  R.drawable.i040_paint)
     //<item>Costa Rica<item>
-    //private val i041 = intArrayOf(R.drawable.i041_animal, R.drawable.i041_flag, R.drawable.i041_food, R.drawable.i041_lang,  R.drawable.i041_paint)
+    private val i041 = intArrayOf(R.drawable.i041_animal, R.drawable.i041_flag, R.drawable.i041_food, R.drawable.i041_lang,  R.drawable.i041_paint)
     //<item>Croatia<item>
-    //private val i042 = intArrayOf(R.drawable.i042_animal, R.drawable.i042_flag, R.drawable.i042_food, R.drawable.i042_lang,  R.drawable.i042_paint)
+    private val i042 = intArrayOf(R.drawable.i042_animal, R.drawable.i042_flag, R.drawable.i042_food, R.drawable.i042_lang,  R.drawable.i042_paint)
     //<item>Cuba<item>
-    //private val i043 = intArrayOf(R.drawable.i043_animal, R.drawable.i043_flag, R.drawable.i043_food, R.drawable.i043_lang,  R.drawable.i043_paint)
+    private val i043 = intArrayOf(R.drawable.i043_animal, R.drawable.i043_flag, R.drawable.i043_food, R.drawable.i043_lang,  R.drawable.i043_paint)
     //<item>Cyprus<item>
-    //private val i044 = intArrayOf(R.drawable.i044_animal, R.drawable.i044_flag, R.drawable.i044_food, R.drawable.i044_lang,  R.drawable.i044_paint)
+    private val i044 = intArrayOf(R.drawable.i044_animal, R.drawable.i044_flag, R.drawable.i044_food, R.drawable.i044_lang,  R.drawable.i044_paint)
     //<item>Czechia (Czech Republic)<item>
-    //private val i045 = intArrayOf(R.drawable.i045_animal, R.drawable.i045_flag, R.drawable.i045_food, R.drawable.i045_lang,  R.drawable.i045_paint)
+    private val i045 = intArrayOf(R.drawable.i045_animal, R.drawable.i045_flag, R.drawable.i045_food, R.drawable.i045_lang,  R.drawable.i045_paint)
     //<item>Democratic Republic of the Congo<item>
-    //private val i046 = intArrayOf(R.drawable.i046_animal, R.drawable.i046_flag, R.drawable.i046_food, R.drawable.i046_lang,  R.drawable.i046_paint)
+    // val i046 = intArrayOf(R.drawable.i046_animal, R.drawable.i046_flag, R.drawable.i046_food, R.drawable.i046_lang,  R.drawable.i046_paint)
     //<item>Denmark<item>
-    //private val i047 = intArrayOf(R.drawable.i047_animal, R.drawable.i047_flag, R.drawable.i047_food, R.drawable.i047_lang,  R.drawable.i047_paint)
+    private val i047 = intArrayOf(R.drawable.i047_animal, R.drawable.i047_flag, R.drawable.i047_food, R.drawable.i047_lang,  R.drawable.i047_paint)
     //<item>Djibouti<item>
-    //private val i048 = intArrayOf(R.drawable.i048_animal, R.drawable.i048_flag, R.drawable.i048_food, R.drawable.i048_lang,  R.drawable.i048_paint)
+    private val i048 = intArrayOf(R.drawable.i048_animal, R.drawable.i048_flag, R.drawable.i048_food, R.drawable.i048_lang,  R.drawable.i048_paint)
     //<item>Dominica<item>
-    //private val i049 = intArrayOf(R.drawable.i049_animal, R.drawable.i049_flag, R.drawable.i049_food, R.drawable.i049_lang,  R.drawable.i049_paint)
+    private val i049 = intArrayOf(R.drawable.i049_animal, R.drawable.i049_flag, R.drawable.i049_food, R.drawable.i049_lang,  R.drawable.i049_paint)
     //<item>Dominican Republic<item>
-    //private val i050 = intArrayOf(R.drawable.i050_animal, R.drawable.i050_flag, R.drawable.i050_food, R.drawable.i050_lang,  R.drawable.i050_paint)
+    private val i050 = intArrayOf(R.drawable.i050_animal, R.drawable.i050_flag, R.drawable.i050_food, R.drawable.i050_lang,  R.drawable.i050_paint)
     //<item>Ecuador<item>
-    //private val i051 = intArrayOf(R.drawable.i051_animal, R.drawable.i051_flag, R.drawable.i051_food, R.drawable.i051_lang,  R.drawable.i051_paint)
+    private val i051 = intArrayOf(R.drawable.i051_animal, R.drawable.i051_flag, R.drawable.i051_food, R.drawable.i051_lang,  R.drawable.i051_paint)
     //<item>Egypt<item>
-    //private val i052 = intArrayOf(R.drawable.i052_animal, R.drawable.i052_flag, R.drawable.i052_food, R.drawable.i052_lang,  R.drawable.i052_paint)
+    private val i052 = intArrayOf(R.drawable.i052_animal, R.drawable.i052_flag, R.drawable.i052_food, R.drawable.i052_lang,  R.drawable.i052_paint)
     //<item>El Salvador<item>
-    //private val i053 = intArrayOf(R.drawable.i053_animal, R.drawable.i053_flag, R.drawable.i053_food, R.drawable.i053_lang,  R.drawable.i053_paint)
+    private val i053 = intArrayOf(R.drawable.i053_animal, R.drawable.i053_flag, R.drawable.i053_food, R.drawable.i053_lang,  R.drawable.i053_paint)
     //<item>Equatorial Guinea<item>
-    //private val i054 = intArrayOf(R.drawable.i054_animal, R.drawable.i054_flag, R.drawable.i054_food, R.drawable.i054_lang,  R.drawable.i054_paint)
+    private val i054 = intArrayOf(R.drawable.i054_animal, R.drawable.i054_flag, R.drawable.i054_food, R.drawable.i054_lang,  R.drawable.i054_paint)
     //<item>Eritrea<item>
     private val i055 = intArrayOf(R.drawable.i055_animal, R.drawable.i055_flag, R.drawable.i055_food, R.drawable.i055_lang,  R.drawable.i055_paint)
     //<item>Estonia<item>
-    //private val i056 = intArrayOf(R.drawable.i056_animal, R.drawable.i056_flag, R.drawable.i056_food, R.drawable.i056_lang,  R.drawable.i056_paint)
+    private val i056 = intArrayOf(R.drawable.i056_animal, R.drawable.i056_flag, R.drawable.i056_food, R.drawable.i056_lang,  R.drawable.i056_paint)
     //<item>Eswatini (fmr. "Swaziland")<item>
-    //private val i057 = intArrayOf(R.drawable.i057_animal, R.drawable.i057_flag, R.drawable.i057_food, R.drawable.i057_lang,  R.drawable.i057_paint)
+    private val i057 = intArrayOf(R.drawable.i057_animal, R.drawable.i057_flag, R.drawable.i057_food, R.drawable.i057_lang,  R.drawable.i057_paint)
     //<item>Ethiopia<item>
-    //private val i058 = intArrayOf(R.drawable.i058_animal, R.drawable.i058_flag, R.drawable.i058_food, R.drawable.i058_lang,  R.drawable.i058_paint)
+    private val i058 = intArrayOf(R.drawable.i058_animal, R.drawable.i058_flag, R.drawable.i058_food, R.drawable.i058_lang,  R.drawable.i058_paint)
     //<item>Fiji<item>
-    //private val i059 = intArrayOf(R.drawable.i059_animal, R.drawable.i059_flag, R.drawable.i059_food, R.drawable.i059_lang,  R.drawable.i059_paint)
+    private val i059 = intArrayOf(R.drawable.i059_animal, R.drawable.i059_flag, R.drawable.i059_food, R.drawable.i059_lang,  R.drawable.i059_paint)
     //<item>Finland<item>
-    //private val i060 = intArrayOf(R.drawable.i060_animal, R.drawable.i060_flag, R.drawable.i060_food, R.drawable.i060_lang,  R.drawable.i060_paint)
+    private val i060 = intArrayOf(R.drawable.i060_animal, R.drawable.i060_flag, R.drawable.i060_food, R.drawable.i060_lang,  R.drawable.i060_paint)
     //<item>France<item>
     private val i061 = intArrayOf(R.drawable.i061_animal, R.drawable.i061_flag, R.drawable.i061_food, R.drawable.i061_lang,  R.drawable.i061_paint)
     //<item>Gabon<item>
-    //private val i062 = intArrayOf(R.drawable.i062_animal, R.drawable.i062_flag, R.drawable.i062_food, R.drawable.i062_lang,  R.drawable.i062_paint)
+    private val i062 = intArrayOf(R.drawable.i062_animal, R.drawable.i062_flag, R.drawable.i062_food, R.drawable.i062_lang,  R.drawable.i062_paint)
     //<item>Gambia<item>
-    //private val i063 = intArrayOf(R.drawable.i063_animal, R.drawable.i063_flag, R.drawable.i063_food, R.drawable.i063_lang,  R.drawable.i063_paint)
+    private val i063 = intArrayOf(R.drawable.i063_animal, R.drawable.i063_flag, R.drawable.i063_food, R.drawable.i063_lang,  R.drawable.i063_paint)
     //<item>Georgia<item>
-    //private val i064 = intArrayOf(R.drawable.i064_animal, R.drawable.i064_flag, R.drawable.i064_food, R.drawable.i064_lang,  R.drawable.i064_paint)
+    private val i064 = intArrayOf(R.drawable.i064_animal, R.drawable.i064_flag, R.drawable.i064_food, R.drawable.i064_lang,  R.drawable.i064_paint)
     //<item>Germany<item>
-    //private val i065 = intArrayOf(R.drawable.i065_animal, R.drawable.i065_flag, R.drawable.i065_food, R.drawable.i065_lang,  R.drawable.i065_paint)
+    private val i065 = intArrayOf(R.drawable.i065_animal, R.drawable.i065_flag, R.drawable.i065_food, R.drawable.i065_lang,  R.drawable.i065_paint)
     //<item>Ghana<item>
-    //private val i066 = intArrayOf(R.drawable.i066_animal, R.drawable.i066_flag, R.drawable.i066_food, R.drawable.i066_lang,  R.drawable.i066_paint)
+    private val i066 = intArrayOf(R.drawable.i066_animal, R.drawable.i066_flag, R.drawable.i066_food, R.drawable.i066_lang,  R.drawable.i066_paint)
     //<item>Greece<item>
-    //private val i067 = intArrayOf(R.drawable.i067_animal, R.drawable.i067_flag, R.drawable.i067_food, R.drawable.i067_lang,  R.drawable.i067_paint)
+    private val i067 = intArrayOf(R.drawable.i067_animal, R.drawable.i067_flag, R.drawable.i067_food, R.drawable.i067_lang,  R.drawable.i067_paint)
     //<item>Grenada<item>
-    //private val i068 = intArrayOf(R.drawable.i068_animal, R.drawable.i068_flag, R.drawable.i068_food, R.drawable.i068_lang,  R.drawable.i068_paint)
+    private val i068 = intArrayOf(R.drawable.i068_animal, R.drawable.i068_flag, R.drawable.i068_food, R.drawable.i068_lang,  R.drawable.i068_paint)
     //<item>Guatemala<item>
     private val i069 = intArrayOf(R.drawable.i069_animal, R.drawable.i069_flag, R.drawable.i069_food, R.drawable.i069_lang,  R.drawable.i069_paint)
     //<item>Guinea<item>
-    //private val i070 = intArrayOf(R.drawable.i070_animal, R.drawable.i070_flag, R.drawable.i070_food, R.drawable.i070_lang,  R.drawable.i070_paint)
+    private val i070 = intArrayOf(R.drawable.i070_animal, R.drawable.i070_flag, R.drawable.i070_food, R.drawable.i070_lang,  R.drawable.i070_paint)
     //<item>Guinea-Bissau<item>
-    //private val i071 = intArrayOf(R.drawable.i071_animal, R.drawable.i071_flag, R.drawable.i071_food, R.drawable.i071_lang,  R.drawable.i071_paint)
+    private val i071 = intArrayOf(R.drawable.i071_animal, R.drawable.i071_flag, R.drawable.i071_food, R.drawable.i071_lang,  R.drawable.i071_paint)
     //<item>Guyana<item>
-    //private val i072 = intArrayOf(R.drawable.i072_animal, R.drawable.i072_flag, R.drawable.i072_food, R.drawable.i072_lang,  R.drawable.i072_paint)
+    private val i072 = intArrayOf(R.drawable.i072_animal, R.drawable.i072_flag, R.drawable.i072_food, R.drawable.i072_lang,  R.drawable.i072_paint)
     //<item>Haiti<item>
-    //private val i073 = intArrayOf(R.drawable.i073_animal, R.drawable.i073_flag, R.drawable.i073_food, R.drawable.i073_lang,  R.drawable.i073_paint)
+    private val i073 = intArrayOf(R.drawable.i073_animal, R.drawable.i073_flag, R.drawable.i073_food, R.drawable.i073_lang,  R.drawable.i073_paint)
     //<item>Holy See<item>
-    //private val i074 = intArrayOf(R.drawable.i074_animal, R.drawable.i074_flag, R.drawable.i074_food, R.drawable.i074_lang,  R.drawable.i074_paint)
+    private val i074 = intArrayOf(R.drawable.i074_animal, R.drawable.i074_flag, R.drawable.i074_food, R.drawable.i074_lang,  R.drawable.i074_paint)
     //<item>Honduras<item>
-    //private val i075 = intArrayOf(R.drawable.i075_animal, R.drawable.i075_flag, R.drawable.i075_food, R.drawable.i075_lang,  R.drawable.i075_paint)
+    private val i075 = intArrayOf(R.drawable.i075_animal, R.drawable.i075_flag, R.drawable.i075_food, R.drawable.i075_lang,  R.drawable.i075_paint)
     //<item>Hungary<item>
     //private val i076 = intArrayOf(R.drawable.i076_animal, R.drawable.i076_flag, R.drawable.i076_food, R.drawable.i076_lang,  R.drawable.i076_paint)
     //<item>Iceland<item>
-    //private val i077 = intArrayOf(R.drawable.i077_animal, R.drawable.i077_flag, R.drawable.i077_food, R.drawable.i077_lang,  R.drawable.i077_paint)
+    private val i077 = intArrayOf(R.drawable.i077_animal, R.drawable.i077_flag, R.drawable.i077_food, R.drawable.i077_lang,  R.drawable.i077_paint)
     //<item>India<item>
-    //private val i078 = intArrayOf(R.drawable.i078_animal, R.drawable.i078_flag, R.drawable.i078_food, R.drawable.i078_lang,  R.drawable.i078_paint)
+    private val i078 = intArrayOf(R.drawable.i078_animal, R.drawable.i078_flag, R.drawable.i078_food, R.drawable.i078_lang,  R.drawable.i078_paint)
     //<item>Indonesia<item>
-    //private val i079 = intArrayOf(R.drawable.i079_animal, R.drawable.i079_flag, R.drawable.i079_food, R.drawable.i079_lang,  R.drawable.i079_paint)
+    private val i079 = intArrayOf(R.drawable.i079_animal, R.drawable.i079_flag, R.drawable.i079_food, R.drawable.i079_lang,  R.drawable.i079_paint)
     //<item>Iran<item>
-    //private val i080 = intArrayOf(R.drawable.i080_animal, R.drawable.i080_flag, R.drawable.i080_food, R.drawable.i080_lang,  R.drawable.i080_paint)
+    private val i080 = intArrayOf(R.drawable.i080_animal, R.drawable.i080_flag, R.drawable.i080_food, R.drawable.i080_lang,  R.drawable.i080_paint)
     //<item>Iraq<item>
-    //private val i081 = intArrayOf(R.drawable.i081_animal, R.drawable.i081_flag, R.drawable.i081_food, R.drawable.i081_lang,  R.drawable.i081_paint)
+    private val i081 = intArrayOf(R.drawable.i081_animal, R.drawable.i081_flag, R.drawable.i081_food, R.drawable.i081_lang,  R.drawable.i081_paint)
     //<item>Ireland<item>
-    //private val i082 = intArrayOf(R.drawable.i082_animal, R.drawable.i082_flag, R.drawable.i082_food, R.drawable.i082_lang,  R.drawable.i082_paint)
+    private val i082 = intArrayOf(R.drawable.i082_animal, R.drawable.i082_flag, R.drawable.i082_food, R.drawable.i082_lang,  R.drawable.i082_paint)
     //<item>Israel<item>
-    //private val i083 = intArrayOf(R.drawable.i083_animal, R.drawable.i083_flag, R.drawable.i083_food, R.drawable.i083_lang,  R.drawable.i083_paint)
+    private val i083 = intArrayOf(R.drawable.i083_animal, R.drawable.i083_flag, R.drawable.i083_food, R.drawable.i083_lang,  R.drawable.i083_paint)
     //<item>Italy<item>
-    //private val i084 = intArrayOf(R.drawable.i084_animal, R.drawable.i084_flag, R.drawable.i084_food, R.drawable.i084_lang,  R.drawable.i084_paint)
+    private val i084 = intArrayOf(R.drawable.i084_animal, R.drawable.i084_flag, R.drawable.i084_food, R.drawable.i084_lang,  R.drawable.i084_paint)
     //<item>Jamaica<item>
-    //private val i085 = intArrayOf(R.drawable.i085_animal, R.drawable.i085_flag, R.drawable.i085_food, R.drawable.i085_lang,  R.drawable.i085_paint)
+    private val i085 = intArrayOf(R.drawable.i085_animal, R.drawable.i085_flag, R.drawable.i085_food, R.drawable.i085_lang,  R.drawable.i085_paint)
     //<item>Japan<item>
-    //private val i086 = intArrayOf(R.drawable.i086_animal, R.drawable.i086_flag, R.drawable.i086_food, R.drawable.i086_lang,  R.drawable.i086_paint)
+    private val i086 = intArrayOf(R.drawable.i086_animal, R.drawable.i086_flag, R.drawable.i086_food, R.drawable.i086_lang,  R.drawable.i086_paint)
     //<item>Jordan<item>
-    //private val i087 = intArrayOf(R.drawable.i087_animal, R.drawable.i087_flag, R.drawable.i087_food, R.drawable.i087_lang,  R.drawable.i087_paint)
+    private val i087 = intArrayOf(R.drawable.i087_animal, R.drawable.i087_flag, R.drawable.i087_food, R.drawable.i087_lang,  R.drawable.i087_paint)
     //<item>Kazakhstan<item>
-    //private val i088 = intArrayOf(R.drawable.i088_animal, R.drawable.i088_flag, R.drawable.i088_food, R.drawable.i088_lang,  R.drawable.i088_paint)
+    private val i088 = intArrayOf(R.drawable.i088_animal, R.drawable.i088_flag, R.drawable.i088_food, R.drawable.i088_lang,  R.drawable.i088_paint)
     //<item>Kenya<item>
-    //private val i089 = intArrayOf(R.drawable.i089_animal, R.drawable.i089_flag, R.drawable.i089_food, R.drawable.i089_lang,  R.drawable.i089_paint)
+    private val i089 = intArrayOf(R.drawable.i089_animal, R.drawable.i089_flag, R.drawable.i089_food, R.drawable.i089_lang,  R.drawable.i089_paint)
     //<item>Kiribati<item>
-    //private val i090 = intArrayOf(R.drawable.i090_animal, R.drawable.i090_flag, R.drawable.i090_food, R.drawable.i090_lang,  R.drawable.i090_paint)
+    private val i090 = intArrayOf(R.drawable.i090_animal, R.drawable.i090_flag, R.drawable.i090_food, R.drawable.i090_lang,  R.drawable.i090_paint)
     //<item>Kuwait<item>
     //private val i091 = intArrayOf(R.drawable.i091_animal, R.drawable.i091_flag, R.drawable.i091_food, R.drawable.i091_lang,  R.drawable.i091_paint)
     //<item>Kyrgyzstan<item>
@@ -630,13 +630,24 @@ class Daily : AppCompatActivity() {
     * are added as elements in a 2-Dimensional array. Each variable such as "i001" is a country within
     * the array, along with their associated images.
     */
-    private var arr = arrayOf(i001, i035, i040, i055, i061, i069, i111, i115, i124, i127, i170, i186, i187)
+    private var arr = arrayOf(i001, i002, i003, i004, i005, i006, i008, i009, i010, i011, i012, i013, i014, i015, i016, i017, i018, i019, i020, i021, i022, i023, i024, i025, i027, i028, i029, i030, i031, i032, i033, i034, i035, i036, i039,
+        i040, i041, i042, i043, i044, i045, i047, i048, i049, i050, i051, i052, i053, i054, i055, i056, i057, i058, i059, i060, i061, i062, i063, i064, i065, i066, i067, i068, i069, i070, i071, i072, i073, i074, i075, i077, i078,
+        i079, i080, i081, i082, i083, i084, i085, i086, i087, i088, i089, i090, i111, i115, i124, i127, i170, i186, i187)
     /*
     * This array of Strings contains all of the corresponding text answers for each country.
     * Each answer is matched to the array of countries per index for chronological orders sake of organisation.
     * More String answer elements will be added in the future.
      */
-    private var answers = arrayOf("Afghanistan", "Chad", "Congo", "Eritrea", "France", "Guatemala", "Mexico", "Mongolia", "New Zealand", "Nigeria", "Switzerland", "United Kingdom", "United States")
+    private var answers = arrayOf("Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina",
+        "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium",
+        "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso",
+        "Burundi", "Côte d'Ivoire", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China",
+        "Colombia", "Comoros", "Congo (Congo-Brazzaville)", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czechia (Czech Republic)",
+        "Democratic Republic of the Congo", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador",
+        "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany",
+        "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Holy See", "Honduras", "Hungary", "Iceland",
+        "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati",
+        "Mexico", "Mongolia", "New Zealand", "Nigeria", "Switzerland", "United Kingdom", "United States")
 
     /*
     * Variables:
