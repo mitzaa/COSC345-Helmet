@@ -10,7 +10,7 @@ val preferenceManager = PreferenceManager()
  * the activeDate being used by the application.
  */
 class DateManager {
-    fun getActiveDate(context : Context): String {
+    private fun getActiveDate(context : Context): String {
         val activeDate = preferenceManager.getStrValue("activeDate", context)
         if(activeDate == "DEFAULT") {
             val date = getCurrentDate()
@@ -19,7 +19,7 @@ class DateManager {
         return preferenceManager.getStrValue("activeDate", context)
     }
 
-    fun getCurrentDate(): String {
+    private fun getCurrentDate(): String {
         val currentDate = Calendar.getInstance()
         return currentDate.time.toString().substring(0, 10)
     }
