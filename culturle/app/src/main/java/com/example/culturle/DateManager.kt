@@ -24,6 +24,11 @@ class DateManager {
         return currentDate.time.toString().substring(0, 10)
     }
 
+    /**
+     * Function which checks if the current date and active date hold the same value, if not, calls updateDates to
+     * update active date to match the current date.
+     * Called from MainActivity.kt
+     */
     fun isNewDay(context : Context): Boolean {
         if(getCurrentDate() == getActiveDate(context)) {
             return false
@@ -32,6 +37,10 @@ class DateManager {
         return true
     }
 
+    /**
+     * Private function which checks if the current date and active date hold the same value, if not,
+     * updates active date to match the current date. Called from isNewDay()
+     */
     private fun updateDates(context : Context) {
         if(getCurrentDate() != getActiveDate(context)) {
             val date = getCurrentDate()

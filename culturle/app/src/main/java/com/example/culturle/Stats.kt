@@ -68,4 +68,12 @@ class Stats : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    /**
+     * Method used for unit testing allowing easy access to individual stat values
+     */
+    fun getStat( statName : String) : Int {
+        val preferenceManager = PreferenceManager()
+        return preferenceManager.getIntValue(statName, this)
+    }
 }

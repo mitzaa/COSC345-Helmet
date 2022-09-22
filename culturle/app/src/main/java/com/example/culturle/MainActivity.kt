@@ -87,7 +87,7 @@ open class MainActivity : AppCompatActivity() {
     /**
     * Function which compares the activeDate and the currentDate and updates their values if needed
     */
-    fun checkAndUpdateDateVariables() {
+    private fun checkAndUpdateDateVariables() {
         val preferenceManager = PreferenceManager()
         val dateManager = DateManager()
         if(dateManager.isNewDay(this)) {

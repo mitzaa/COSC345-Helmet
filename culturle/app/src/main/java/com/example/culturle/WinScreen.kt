@@ -38,7 +38,9 @@ class WinScreen : AppCompatActivity() {
         }
 
         val numGuessesDisplay = findViewById<View>(R.id.numGuessesView) as TextView
-        numGuessesDisplay.text = "Guesses: " + intent.getIntExtra("numGuesses", 0)
+        val numGuessesValue = intent.getIntExtra("numGuesses", 0)
+        val numGuessesString = "Guesses $numGuessesValue"
+        numGuessesDisplay.text = numGuessesString
 
         val todaysCountryDisplay = findViewById<View>(R.id.textView10) as TextView
         todaysCountryDisplay.text = intent.getStringExtra("todaysCountry")

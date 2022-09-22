@@ -32,7 +32,7 @@ class EndScreen : AppCompatActivity() {
 
         // Grab image and text views by id and then set them to today's countries
         val todaysCountryDisplay = findViewById<View>(R.id.textView10) as TextView
-        todaysCountryDisplay.setText(intent.getStringExtra("todaysCountry"))
+        todaysCountryDisplay.text = intent.getStringExtra("todaysCountry")
 
         val todaysCountryFlag = findViewById<View>(R.id.countryFlagEnd) as ImageView
         val todaysArray = intent.getIntArrayExtra("todaysFlag")
