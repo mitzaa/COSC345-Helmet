@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.math.PI
 
@@ -46,7 +47,7 @@ class Daily : AppCompatActivity() {
     //<item>Antigua and Barbuda<item>
     private val i006 = intArrayOf(R.drawable.i006_animal, R.drawable.i006_flag, R.drawable.i006_food, R.drawable.i006_lang,  R.drawable.i006_paint)
     //<item>Argentina<item>
-    //private val i007 = intArrayOf(R.drawable.i007_animal, R.drawable.i007_flag, R.drawable.i007_food, R.drawable.i007_lang,  R.drawable.i007_paint)
+    private val i007 = intArrayOf(R.drawable.i007_animal, R.drawable.i007_flag, R.drawable.i007_food, R.drawable.i007_lang,  R.drawable.i007_paint)
     //<item>Armenia<item>
     private val i008 = intArrayOf(R.drawable.i008_animal, R.drawable.i008_flag, R.drawable.i008_food, R.drawable.i008_lang,  R.drawable.i008_paint)
     //<item>Australia<item>
@@ -84,7 +85,7 @@ class Daily : AppCompatActivity() {
     //<item>Brunei<item>
     private val i025 = intArrayOf(R.drawable.i025_animal, R.drawable.i025_flag, R.drawable.i025_food, R.drawable.i025_lang,  R.drawable.i025_paint)
     //<item>Bulgaria<item>
-    //private val i026 = intArrayOf(R.drawable.i026_animal, R.drawable.i026_flag, R.drawable.i026_food, R.drawable.i026_lang,  R.drawable.i026_paint)
+    private val i026 = intArrayOf(R.drawable.i026_animal, R.drawable.i026_flag, R.drawable.i026_food, R.drawable.i026_lang,  R.drawable.i026_paint)
     //<item>Burkina Faso<item>
     private val i027 = intArrayOf(R.drawable.i027_animal, R.drawable.i027_flag, R.drawable.i027_food, R.drawable.i027_lang,  R.drawable.i027_paint)
     //<item>Burundi<item>
@@ -106,12 +107,12 @@ class Daily : AppCompatActivity() {
     //<item>Chile<item>
     private val i036 = intArrayOf(R.drawable.i036_animal, R.drawable.i036_flag, R.drawable.i036_food, R.drawable.i036_lang,  R.drawable.i036_paint)
     //<item>China<item>
-    //private val i037 = intArrayOf(R.drawable.i037_animal, R.drawable.i037_flag, R.drawable.i037_food, R.drawable.i037_lang,  R.drawable.i037_paint)
+    private val i037 = intArrayOf(R.drawable.i037_animal, R.drawable.i037_flag, R.drawable.i037_food, R.drawable.i037_lang,  R.drawable.i037_paint)
     //<item>Colombia<item>
-    //private val i038 = intArrayOf(R.drawable.i038_animal, R.drawable.i038_flag, R.drawable.i038_food, R.drawable.i038_lang,  R.drawable.i038_paint)
+    private val i038 = intArrayOf(R.drawable.i038_animal, R.drawable.i038_flag, R.drawable.i038_food, R.drawable.i038_lang,  R.drawable.i038_paint)
     //<item>Comoros<item>
     private val i039 = intArrayOf(R.drawable.i039_animal, R.drawable.i039_flag, R.drawable.i039_food, R.drawable.i039_lang,  R.drawable.i039_paint)
-    //<item>Congo (Congo-Brazzaville)<item>
+    //<item>Republic of the Congo<item>
     private val i040 = intArrayOf(R.drawable.i040_animal, R.drawable.i040_flag, R.drawable.i040_food, R.drawable.i040_lang,  R.drawable.i040_paint)
     //<item>Costa Rica<item>
     private val i041 = intArrayOf(R.drawable.i041_animal, R.drawable.i041_flag, R.drawable.i041_food, R.drawable.i041_lang,  R.drawable.i041_paint)
@@ -124,7 +125,7 @@ class Daily : AppCompatActivity() {
     //<item>Czechia (Czech Republic)<item>
     private val i045 = intArrayOf(R.drawable.i045_animal, R.drawable.i045_flag, R.drawable.i045_food, R.drawable.i045_lang,  R.drawable.i045_paint)
     //<item>Democratic Republic of the Congo<item>
-    // val i046 = intArrayOf(R.drawable.i046_animal, R.drawable.i046_flag, R.drawable.i046_food, R.drawable.i046_lang,  R.drawable.i046_paint)
+    private val i046 = intArrayOf(R.drawable.i046_animal, R.drawable.i046_flag, R.drawable.i046_food, R.drawable.i046_lang,  R.drawable.i046_paint)
     //<item>Denmark<item>
     private val i047 = intArrayOf(R.drawable.i047_animal, R.drawable.i047_flag, R.drawable.i047_food, R.drawable.i047_lang,  R.drawable.i047_paint)
     //<item>Djibouti<item>
@@ -184,7 +185,7 @@ class Daily : AppCompatActivity() {
     //<item>Honduras<item>
     private val i075 = intArrayOf(R.drawable.i075_animal, R.drawable.i075_flag, R.drawable.i075_food, R.drawable.i075_lang,  R.drawable.i075_paint)
     //<item>Hungary<item>
-    //private val i076 = intArrayOf(R.drawable.i076_animal, R.drawable.i076_flag, R.drawable.i076_food, R.drawable.i076_lang,  R.drawable.i076_paint)
+    private val i076 = intArrayOf(R.drawable.i076_animal, R.drawable.i076_flag, R.drawable.i076_food, R.drawable.i076_lang,  R.drawable.i076_paint)
     //<item>Iceland<item>
     private val i077 = intArrayOf(R.drawable.i077_animal, R.drawable.i077_flag, R.drawable.i077_food, R.drawable.i077_lang,  R.drawable.i077_paint)
     //<item>India<item>
@@ -630,9 +631,9 @@ class Daily : AppCompatActivity() {
     * are added as elements in a 2-Dimensional array. Each variable such as "i001" is a country within
     * the array, along with their associated images.
     */
-    private var arr = arrayOf(i001, i002, i003, i004, i005, i006, i008, i009, i010, i011, i012, i013, i014, i015, i016, i017, i018, i019, i020, i021, i022, i023, i024, i025, i027, i028, i029, i030, i031, i032, i033, i034, i035, i036, i039,
-        i040, i041, i042, i043, i044, i045, i047, i048, i049, i050, i051, i052, i053, i054, i055, i056, i057, i058, i059, i060, i061, i062, i063, i064, i065, i066, i067, i068, i069, i070, i071, i072, i073, i074, i075, i077, i078,
-        i079, i080, i081, i082, i083, i084, i085, i086, i087, i088, i089, i090, i111, i115, i124, i127, i170, i186, i187)
+    private var arr = arrayOf(i001, i002, i003, i004, i005, i006, i007, i008, i009, i010, i011, i012, i013, i014, i015, i016, i017, i018, i019, i020, i021, i022, i023, i024, i025, i026, i027, i028, i029, i030, i031, i032, i033, i034, i035, i036, i037, i038, i039,
+        i040, i041, i042, i043, i044, i045, i046, i047, i048, i049, i050, i051, i052, i053, i054, i055, i056, i057, i058, i059, i060, i061, i062, i063, i064, i065, i066, i067, i068, i069, i070, i071, i072, i073, i074, i075, i077, i078,
+        i079, i080, i081, i082, i083, i084, i085, i086, i087, i088, i089, i090)
     /*
     * This array of Strings contains all of the corresponding text answers for each country.
     * Each answer is matched to the array of countries per index for chronological orders sake of organisation.
@@ -642,7 +643,7 @@ class Daily : AppCompatActivity() {
         "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium",
         "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso",
         "Burundi", "Côte d'Ivoire", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China",
-        "Colombia", "Comoros", "Congo (Congo-Brazzaville)", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czechia (Czech Republic)",
+        "Colombia", "Comoros", "Republic of the Congo", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czechia (Czech Republic)",
         "Democratic Republic of the Congo", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador",
         "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany",
         "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Holy See", "Honduras", "Hungary", "Iceland",
@@ -670,9 +671,11 @@ class Daily : AppCompatActivity() {
         // creates a random index column number for the 2-dimensional array so a country entry containing
         // images is chosen at random.
         val rnd = Random()
+        var todayCountry = rnd.nextInt(arr.size)
 
         val dailyMode = intent.getBooleanExtra("dailyMode", false)
         if(dailyMode) {
+            todayCountry = getTodayNumber()
             val preferenceManager = PreferenceManager()
             val gamesPlayed = preferenceManager.getIntValue("gamesPlayed",this)
             preferenceManager.setIntPreference("gamesPlayed", gamesPlayed + 1,this)
@@ -714,20 +717,20 @@ class Daily : AppCompatActivity() {
             flag = true
             //b1 = findViewById<View>(R.id.guessButton) as Button
             iv = findViewById<View>(R.id.hintImage) as ImageView?
-            iv!!.setImageResource(arr[myRandomValues][0])
+            iv!!.setImageResource(arr[todayCountry][0])
             guessBtn.setOnClickListener {
                 //guessBtn!!.setOnClickListener {
                 enteredText = autotextView.text.toString()
 
-                todaysCountry = answers[myRandomValues]
+                todaysCountry = answers[todayCountry]
 
                 // These blocks of if and else statements are used to determine if the user has entered
                 // a guess which results in a win or a loss that the user is directed to either the loss
                 // page of the game or then win page which displays the points and gains of their attempts.
-                if(enteredText == answers[myRandomValues]) {
+                if(enteredText == answers[todayCountry]) {
                     val intent = Intent(this, WinScreen::class.java)
                     intent.putExtra("todaysCountry", todaysCountry)
-                    intent.putExtra("todaysFlag", arr[myRandomValues])
+                    intent.putExtra("todaysFlag", arr[todayCountry])
                     intent.putExtra("dailyMode", dailyMode)
                     intent.putExtra("numGuesses", numGuesses)
                     startActivity(intent)
@@ -741,8 +744,8 @@ class Daily : AppCompatActivity() {
                     textView.text.clear()
                     val lat1 = countryCoordArr[1][0]
                     val lon1 = countryCoordArr[1][1]
-                    val lat2 = countryCoordArr[6][0]
-                    val lon2 = countryCoordArr[6][1]
+                    val lat2 = countryCoordArr[35][0]
+                    val lon2 = countryCoordArr[35][1]
                     val guessDistance = findViewById<View>(R.id.distGuess) as TextView
                     val distance = calcDistance(lat1,lon1,lat2,lon2)
                     guessDistance.text = "Distance Away: ~" + distance.toInt() + "km"
@@ -753,7 +756,7 @@ class Daily : AppCompatActivity() {
                 if (i == 4) {
                     val intent = Intent(this, EndScreen::class.java)
                     intent.putExtra("todaysCountry", todaysCountry)
-                    intent.putExtra("todaysFlag", arr[myRandomValues])
+                    intent.putExtra("todaysFlag", arr[todayCountry])
                     intent.putExtra("dailyMode", dailyMode)
                     startActivity(intent)
                 }
@@ -765,7 +768,7 @@ class Daily : AppCompatActivity() {
                     i++
                     numGuesses++
                 }
-                    iv!!.setImageResource(arr[myRandomValues][order[i]])
+                    iv!!.setImageResource(arr[todayCountry][order[i]])
             }
         }
     }
@@ -786,5 +789,21 @@ class Daily : AppCompatActivity() {
 
     private fun deg2rad(deg : Double) : Double {
         return deg * (PI/180)
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    private fun getTodayNumber() : Int{
+        val sdf1 = SimpleDateFormat("dd")
+        val sdf2 = SimpleDateFormat("M")
+        val currentDate1 = sdf1.format(Date())
+        val currentDate2 = sdf2.format(Date())
+        val day = currentDate1.toInt()
+        val month = currentDate2.toInt()
+        if(day * month <= 90){
+            return day * month
+        }
+        else{
+            return day + month
+        }
     }
 }
