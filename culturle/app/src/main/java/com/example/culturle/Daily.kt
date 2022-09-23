@@ -742,10 +742,15 @@ class Daily : AppCompatActivity() {
                     // if this if statement condition results as a False Boolean value, the incorrect
                     // answer is removed from the text box component.
                     textView.text.clear()
-                    val lat1 = countryCoordArr[1][0]
-                    val lon1 = countryCoordArr[1][1]
-                    val lat2 = countryCoordArr[35][0]
-                    val lon2 = countryCoordArr[35][1]
+                    val currentIndex = answers.indexOf(todaysCountry)
+                    var guessIndex = 0
+                    if(enteredText.length > 0){
+                        guessIndex = answers.indexOf(enteredText)
+                    }
+                    val lat1 = countryCoordArr[guessIndex][0]
+                    val lon1 = countryCoordArr[guessIndex][1]
+                    val lat2 = countryCoordArr[currentIndex][0]
+                    val lon2 = countryCoordArr[currentIndex][1]
                     val guessDistance = findViewById<View>(R.id.distGuess) as TextView
                     val distance = calcDistance(lat1,lon1,lat2,lon2)
                     guessDistance.text = "Distance Away: ~" + distance.toInt() + "km"
