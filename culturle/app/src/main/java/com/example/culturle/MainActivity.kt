@@ -30,7 +30,7 @@ open class MainActivity : AppCompatActivity() {
         * Once clicked an instance of the Daily Class is created.
         */
         //Set button object to the dailyButton id
-        val dailyButtonObj: Button = findViewById<View>(R.id.dailyButton) as Button
+        val dailyButtonObj: ImageButton = findViewById<View>(R.id.dailyButton) as ImageButton
         //Create button listen event to switch over to Daily class activity with dailyMode set to true
         dailyButtonObj.setOnClickListener {
             if(preferenceManager.getIntValue("attemptedDaily", this) == 0) {
@@ -50,7 +50,7 @@ open class MainActivity : AppCompatActivity() {
         * daily game allotment. Once clicked an instance of the Daily Class is created.
         */
         //Set button object to the practiceButton id
-        val practiceButtonObj: Button = findViewById<View>(R.id.practiceButton) as Button
+        val practiceButtonObj: ImageButton = findViewById<View>(R.id.practiceButton) as ImageButton
         //Create button listen event to switch over to Daily class activity with dailyMode set to false
         practiceButtonObj.setOnClickListener {
             dailyMode = false
@@ -67,7 +67,6 @@ open class MainActivity : AppCompatActivity() {
         //Create button listen event to switch over to Practice class activity
         infoButtonObj.setOnClickListener {
             val intent = Intent(this, Info::class.java)
-            intent.putExtra("dailyMode", dailyMode)
             startActivity(intent)
         }
 

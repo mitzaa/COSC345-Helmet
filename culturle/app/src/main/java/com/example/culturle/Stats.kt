@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.math.roundToInt
@@ -60,7 +61,7 @@ class Stats : AppCompatActivity() {
         bestStreakDisplay.text = textToDisplay
 
         //Set button object to the practiceButton id
-        val homeButtonObj: Button = findViewById<View>(R.id.homeStatsButton) as Button
+        val homeButtonObj: ImageButton = findViewById<View>(R.id.homeStatsButton) as ImageButton
         //Create button listen event to switch over to Practice class activity
         // Intent is the method of handling the switch
         homeButtonObj.setOnClickListener {

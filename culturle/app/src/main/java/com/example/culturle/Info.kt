@@ -3,7 +3,7 @@ package com.example.culturle
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
 /**
@@ -16,7 +16,7 @@ class Info : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
         //Set button object to the practiceButton id
-        val homeButtonObj: Button = findViewById<View>(R.id.homeInfoButton) as Button
+        val homeButtonObj: ImageButton = findViewById<View>(R.id.homeInfoButton) as ImageButton
         //Create button listen event to switch over to Practice class activity
         //Intent is the method of handling the switch
         homeButtonObj.setOnClickListener {

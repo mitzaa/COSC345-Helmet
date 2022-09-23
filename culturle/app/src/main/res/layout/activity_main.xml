@@ -6,73 +6,84 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/dailyButton"
-        android:layout_width="150dp"
-        android:layout_height="65dp"
-        android:backgroundTint="#E91E63"
-        android:text="Daily"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32" />
-
-    <Button
-        android:id="@+id/practiceButton"
-        android:layout_width="150dp"
-        android:layout_height="65dp"
-        android:backgroundTint="#E91E63"
-        android:text="Practice"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="436dp"
-        android:layout_height="845dp"
+        android:layout_width="427dp"
+        android:layout_height="814dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.481"
-        app:srcCompat="@drawable/background" />
+        app:layout_constraintVertical_bias="0.506"
+        app:srcCompat="@drawable/new_background" />
 
     <ImageButton
         android:id="@+id/infoButton"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_marginEnd="36dp"
-        android:backgroundTint="#E91E63"
-        android:tint="#222121"
+        android:background="@drawable/info_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/statsButton"
-        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintHorizontal_bias="0.684"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.64"
-        app:srcCompat="@android:drawable/ic_dialog_info" />
+        app:layout_constraintVertical_bias="0.639" />
 
     <ImageButton
         android:id="@+id/statsButton"
         android:layout_width="65dp"
         android:layout_height="65dp"
-        android:backgroundTint="#E91E63"
-        android:tint="@color/black"
+        android:background="@drawable/trans_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.721"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.64"
-        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+        app:srcCompat="@drawable/stats_icon" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="356dp"
+        android:layout_height="103dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.116"
+        app:srcCompat="@drawable/title_icon" />
+
+    <ImageButton
+        android:id="@+id/dailyButton"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="179dp"
+        android:layout_height="85dp"
+        android:background="@drawable/daily_icon"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.329"
+        app:srcCompat="@drawable/daily_icon"
+        tools:srcCompat="@drawable/daily_icon" />
+
+    <ImageButton
+        android:id="@+id/practiceButton"
+        android:layout_width="174dp"
+        android:layout_height="92dp"
+        android:background="@drawable/trans_background"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495"
+        app:srcCompat="@drawable/practice_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -695,7 +695,7 @@ class Daily : AppCompatActivity() {
         )
         autotextView.setAdapter(adapter)
 
-        val guessBtn = findViewById<Button>(R.id.guessButton)
+        val guessBtn = findViewById<ImageButton>(R.id.guessButton)
         // This if statement block is used to compare the guess country entered by the user
         // to the country held as an answer by the game
         if (guessBtn != null) {

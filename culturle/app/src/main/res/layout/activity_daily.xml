@@ -11,14 +11,15 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="436dp"
-        android:layout_height="845dp"
+        android:layout_width="430dp"
+        android:layout_height="807dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.481"
-        app:srcCompat="@drawable/background" />
+        app:layout_constraintVertical_bias="0.49"
+        app:srcCompat="@drawable/new_background" />
 
     <ImageView
         android:id="@+id/hintImage"
@@ -33,30 +34,29 @@
         app:srcCompat="@drawable/ic1" />
 
 
-    <Button
+    <ImageButton
         android:id="@+id/guessButton"
-        android:layout_width="104dp"
-        android:layout_height="54dp"
-        android:text="Guess"
+        android:layout_width="169dp"
+        android:layout_height="97dp"
+        android:background="@drawable/guess_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.476" />
 
     <AutoCompleteTextView
         android:id="@+id/autoTextView"
-        android:layout_width="365dp"
-        android:layout_height="115dp"
+        android:layout_width="359dp"
+        android:layout_height="116dp"
         android:layout_margin="20dp"
         android:hint="@string/hint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.689"
+        app:layout_constraintVertical_bias="0.686"
         tools:ignore="MissingConstraints" />
 
     <TextView

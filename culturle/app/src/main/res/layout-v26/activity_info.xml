@@ -9,27 +9,26 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="436dp"
-        android:layout_height="845dp"
+        android:layout_width="426dp"
+        android:layout_height="778dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.894"
-        app:srcCompat="@drawable/background" />
+        app:layout_constraintVertical_bias="0.51"
+        app:srcCompat="@drawable/new_background" />
 
-    <Button
+    <ImageButton
         android:id="@+id/homeInfoButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
+        android:layout_width="189dp"
+        android:layout_height="75dp"
+        android:background="@drawable/home_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="0.898" />
 
     <ImageView
         android:id="@+id/imageView9"

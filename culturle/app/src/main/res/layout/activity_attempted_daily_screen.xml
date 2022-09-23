@@ -8,41 +8,40 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="436dp"
-        android:layout_height="845dp"
+        android:layout_width="419dp"
+        android:layout_height="773dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.902"
-        app:srcCompat="@drawable/background" />
+        app:srcCompat="@drawable/new_background" />
 
-    <Button
+    <ImageButton
         android:id="@+id/endHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
+        android:layout_width="151dp"
+        android:layout_height="73dp"
+        android:background="@drawable/home_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="0.785" />
 
     <TextView
         android:id="@+id/attemptedNoticeTextView"
-        android:layout_width="160dp"
-        android:layout_height="300dp"
-        android:background="#777777"
+        android:layout_width="288dp"
+        android:layout_height="207dp"
+        android:background="@drawable/black_tran2"
         android:text="Daily mode has already \nbeen attempted today;\n\nPlay some practice mode to\nprepare for a new challenge tomorrow"
         android:textAlignment="center"
+        android:textColor="#ffff"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.163" />
+        app:layout_constraintVertical_bias="0.351" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
