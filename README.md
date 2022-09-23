@@ -9,6 +9,7 @@ Here's some of the things we have been working on since the alpha:
   -   Addressed and fixed over 100 compiler warnings in the Kotlin files. Remaining warnings are spelling or style issues.
   -   Responded to Codacy's suggestions: We went from 8% issues in our code to 3% by solving 7 of the 14 error-prone issues. Remaining error-prone issues are not
   a serious detriment to our code as they are issues such as a line being too long or using the same string literal in the same line.
+  (Note: Codacy's issues have jumped up 9% solely from the format of this Readme file)
   -   New Look! We have changed up the UI and designed custom buttons
   -   Bug fixes (Daily mode not resetting at the right time, certain country images out of order, wrong sized images etc)
   -   Our early user-testing indiciated that users found the game challenging so we added a feature where the distance from the correct country to the country 
@@ -19,9 +20,12 @@ Here's some of the things we have been working on since the alpha:
 ![Time Profiling](https://user-images.githubusercontent.com/97869940/191952723-d800d4eb-0956-407b-a9bc-1d67c5873967.png)
 
 Important things for us to work on at this stage:
-  -   We haven't been able to get our Documentation to be hosted on GitHub pages
+  -   We haven't been able to get our Documentation to be hosted on GitHub pages. It has been hard to diagnose the issue since
+  'kotlin-android-extensions' Gradle plugin is deprecated.
   -   CodeCov indicates we have 0% code coverage because our unit tests are failing. 
-  -   We need to write more unit tests but it has been hard to see if they are working since our CI pipeline is failing.
+  -   We need to write more unit tests but it has been hard to see if they are working since our CI pipeline is failing. We think this is due to the recent deprectaion of the Gradle plugin.
+
+Please see below for how to build and run Culturle.
 
 
 Alpha Release: August 26th, 2022
@@ -29,7 +33,7 @@ The team at Helmet is excited to release our first functioning version of Cultur
 Culturle is written in Kotlin, for Android, and is designed to run optimally on a Pixel 4a API 33.
 Our proposed questionaire for volunteer testers can be found in the file Questionaire.pdf.
 
-In order to run and test Cultural on your own device: 
+In order to run and test Culturle on your own device: 
   1) Download the repo 
   2) In Android Studio open the file "app" (COSC345-Helmet/culturle/app)
   3) Create a device in "Device Manager" within Android Studio, search for and choose "Pixel 4a API 33". 
