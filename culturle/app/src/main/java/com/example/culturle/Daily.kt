@@ -632,7 +632,7 @@ class Daily : AppCompatActivity() {
     * the array, along with their associated images.
     */
     private var arr = arrayOf(i001, i002, i003, i004, i005, i006, i007, i008, i009, i010, i011, i012, i013, i014, i015, i016, i017, i018, i019, i020, i021, i022, i023, i024, i025, i026, i027, i028, i029, i030, i031, i032, i033, i034, i035, i036, i037, i038, i039,
-        i040, i041, i042, i043, i044, i045, i046, i047, i048, i049, i050, i051, i052, i053, i054, i055, i056, i057, i058, i059, i060, i061, i062, i063, i064, i065, i066, i067, i068, i069, i070, i071, i072, i073, i074, i075, i077, i078,
+        i040, i041, i042, i043, i044, i045, i046, i047, i048, i049, i050, i051, i052, i053, i054, i055, i056, i057, i058, i059, i060, i061, i062, i063, i064, i065, i066, i067, i068, i069, i070, i071, i072, i073, i074, i075, i076, i077, i078,
         i079, i080, i081, i082, i083, i084, i085, i086, i087, i088, i089, i090)
     /*
     * This array of Strings contains all of the corresponding text answers for each country.
