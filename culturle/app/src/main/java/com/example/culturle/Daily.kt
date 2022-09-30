@@ -67,7 +67,9 @@ class Daily : AppCompatActivity() {
     //<item>Belarus<item>
     private val i016 = intArrayOf(R.drawable.i016_animal, R.drawable.i016_flag, R.drawable.i016_food, R.drawable.i016_lang,  R.drawable.i016_paint)
     //<item>Belgium<item>
-    private val i017 = intArrayOf(R.drawable.i017_animal, R.drawable.i017_flag, R.drawable.i017_food, R.drawable.i017_lang,  R.drawable.i017_paint)
+    private val i017 = intArrayOf(R.drawable.i017_animal,
+        R.drawable.i017_flag, R.drawable.i017_food, R.drawable.i017_lang, R.drawable.i017_animal
+    )
     //<item>Belize<item>
     private val i018 = intArrayOf(R.drawable.i018_animal, R.drawable.i018_flag, R.drawable.i018_food, R.drawable.i018_lang,  R.drawable.i018_paint)
     //<item>Benin<item>
@@ -255,7 +257,7 @@ class Daily : AppCompatActivity() {
     //<item>Mauritius<item>
     //private val i110 = intArrayOf(R.drawable.i110_animal, R.drawable.i110_flag, R.drawable.i110_food, R.drawable.i110_lang,  R.drawable.i110_paint)
     //<item>Mexico<item>
-    private val i111 = intArrayOf(R.drawable.i111_animal, R.drawable.i111_flag, R.drawable.i111_food, R.drawable.i111_lang,  R.drawable.i111_paint)
+    //private val i111 = intArrayOf(R.drawable.i111_animal, R.drawable.i111_flag, R.drawable.i111_food, R.drawable.i111_lang,  R.drawable.i111_paint)
     //<item>Micronesia<item>
     //private val i112 = intArrayOf(R.drawable.i112_animal, R.drawable.i112_flag, R.drawable.i112_food, R.drawable.i112_lang,  R.drawable.i112_paint)
     //<item>Moldova<item>
@@ -263,7 +265,7 @@ class Daily : AppCompatActivity() {
     //<item>Monaco<item>
     //private val i114 = intArrayOf(R.drawable.i114_animal, R.drawable.i114_flag, R.drawable.i114_food, R.drawable.i114_lang,  R.drawable.i114_paint)
     //<item>Mongolia<item>
-    private val i115 = intArrayOf(R.drawable.i115_animal, R.drawable.i115_flag, R.drawable.i115_food, R.drawable.i115_lang,  R.drawable.i115_paint)
+    //private val i115 = intArrayOf(R.drawable.i115_animal, R.drawable.i115_flag, R.drawable.i115_food, R.drawable.i115_lang,  R.drawable.i115_paint)
     //<item>Montenegro<item>
     //private val i116 = intArrayOf(R.drawable.i116_animal, R.drawable.i116_flag, R.drawable.i116_food, R.drawable.i116_lang,  R.drawable.i116_paint)
     //<item>Morocco<item>
@@ -281,13 +283,13 @@ class Daily : AppCompatActivity() {
     //<item>Netherlands<item>
     //private val i123 = intArrayOf(R.drawable.i123_animal, R.drawable.i123_flag, R.drawable.i123_food, R.drawable.i123_lang,  R.drawable.i123_paint)
     //<item>New Zealand<item>
-    private val i124 = intArrayOf(R.drawable.i124_animal, R.drawable.i124_flag, R.drawable.i124_food, R.drawable.i124_lang,  R.drawable.i124_paint)
+    //private val i124 = intArrayOf(R.drawable.i124_animal, R.drawable.i124_flag, R.drawable.i124_food, R.drawable.i124_lang,  R.drawable.i124_paint)
     //<item>Nicaragua<item>
     //private val i125 = intArrayOf(R.drawable.i125_animal, R.drawable.i125_flag, R.drawable.i125_food, R.drawable.i125_lang,  R.drawable.i125_paint)
     //<item>Niger<item>
     //private val i126 = intArrayOf(R.drawable.i126_animal, R.drawable.i126_flag, R.drawable.i126_food, R.drawable.i126_lang,  R.drawable.i126_paint)
     //<item>Nigeria<item>
-    private val i127 = intArrayOf(R.drawable.i127_animal, R.drawable.i127_flag, R.drawable.i127_food, R.drawable.i127_lang,  R.drawable.i127_paint)
+    //private val i127 = intArrayOf(R.drawable.i127_animal, R.drawable.i127_flag, R.drawable.i127_food, R.drawable.i127_lang,  R.drawable.i127_paint)
     //<item>North Korea<item>
     //private val i128 = intArrayOf(R.drawable.i128_animal, R.drawable.i128_flag, R.drawable.i128_food, R.drawable.i128_lang,  R.drawable.i128_paint)
     //<item>North Macedonia<item>
@@ -373,7 +375,7 @@ class Daily : AppCompatActivity() {
     //<item>Sweden<item>
     //private val i169 = intArrayOf(R.drawable.i169_animal, R.drawable.i169_flag, R.drawable.i169_food, R.drawable.i169_lang,  R.drawable.i169_paint)
     //<item>Switzerland<item>
-    private val i170 = intArrayOf(R.drawable.i170_animal, R.drawable.i170_flag, R.drawable.i170_food, R.drawable.i170_lang,  R.drawable.i170_paint)
+    //private val i170 = intArrayOf(R.drawable.i170_animal, R.drawable.i170_flag, R.drawable.i170_food, R.drawable.i170_lang,  R.drawable.i170_paint)
     //<item>Syria<item>
     //private val i171 = intArrayOf(R.drawable.i171_animal, R.drawable.i171_flag, R.drawable.i171_food, R.drawable.i171_lang,  R.drawable.i171_paint)
     //<item>Tajikistan<item>
@@ -405,9 +407,9 @@ class Daily : AppCompatActivity() {
     //<item>United Arab Emirates<item>
     //private val i185 = intArrayOf(R.drawable.i185_animal, R.drawable.i185_flag, R.drawable.i185_food, R.drawable.i185_lang,  R.drawable.i185_paint)
     //<item>United Kingdom<item>
-    private val i186 = intArrayOf(R.drawable.i186_animal, R.drawable.i186_flag, R.drawable.i186_food, R.drawable.i186_lang,  R.drawable.i186_paint)
+    //private val i186 = intArrayOf(R.drawable.i186_animal, R.drawable.i186_flag, R.drawable.i186_food, R.drawable.i186_lang,  R.drawable.i186_paint)
     //<item>United States of America<item>
-    private val i187 = intArrayOf(R.drawable.i187_animal, R.drawable.i187_flag, R.drawable.i187_food, R.drawable.i187_lang,  R.drawable.i187_paint)
+    //private val i187 = intArrayOf(R.drawable.i187_animal, R.drawable.i187_flag, R.drawable.i187_food, R.drawable.i187_lang,  R.drawable.i187_paint)
     //<item>Uruguay<item>
     //private val i188 = intArrayOf(R.drawable.i188_animal, R.drawable.i188_flag, R.drawable.i188_food, R.drawable.i188_lang,  R.drawable.i188_paint)
     //<item>Uzbekistan<item>
@@ -696,7 +698,6 @@ class Daily : AppCompatActivity() {
         // This variable is dynamically used to produce a random int number for the 2-dimensional array based on the
         // number of elements it contains. This variable number range will be updated when the completion of more countries can be
         // entered.
-        val myRandomValues = rnd.nextInt(arr.size)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_daily)
         val autotextView = findViewById<AutoCompleteTextView>(R.id.autoTextView)

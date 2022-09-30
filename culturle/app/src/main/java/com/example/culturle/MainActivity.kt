@@ -3,7 +3,6 @@ package com.example.culturle
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
@@ -19,7 +18,7 @@ open class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //Boolean which determines whether the game instance is Daily mode or Practice mode
-        var dailyMode = false
+        var dailyMode: Boolean
 
         //Check and update dates
         checkAndUpdateDateVariables()
