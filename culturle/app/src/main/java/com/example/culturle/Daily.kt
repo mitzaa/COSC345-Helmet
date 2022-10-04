@@ -771,6 +771,21 @@ class Daily : AppCompatActivity() {
                     else{
                         guessDistance.text = "Unknown Country"
                     }
+                    val hintDisplay = findViewById<View>(R.id.hintTitleTextView) as TextView
+                    when (i) {
+                        0 -> {
+                            hintDisplay.text = "Hint 2/5: National Artwork"
+                        }
+                        1 -> {
+                            hintDisplay.text = "Hint 3/5: National Cuisine"
+                        }
+                        2 -> {
+                            hintDisplay.text = "Hint 4/5: National Languages"
+                        }
+                        3 -> {
+                            hintDisplay.text = "Hint 5/5: National Flag"
+                        }
+                    }
                 }
                 // This if statement executes if the maximum number of guesses has been attempted per
                 // daily game. if the iterator variable for the number of games is equal to 5 the game
