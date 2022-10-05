@@ -766,7 +766,7 @@ class Daily : AppCompatActivity() {
                     val guessDistance = findViewById<View>(R.id.distGuess) as TextView
                     val distance = calcDistance(lat1,lon1,lat2,lon2)
                     if(answers.indexOf(enteredText) != -1){
-                        guessDistance.text = "Distance Away: ~" + distance.toInt() + "km"
+                        guessDistance.text = "Your guess (" + enteredText + ") is ~" + distance.toInt() + "km from the target country."
                     }
                     else{
                         guessDistance.text = "Unknown Country"
