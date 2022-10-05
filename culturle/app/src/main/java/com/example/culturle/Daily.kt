@@ -2,6 +2,7 @@ package com.example.culturle
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -681,6 +682,8 @@ class Daily : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         // creates a random index column number for the 2-dimensional array so a country entry containing
         // images is chosen at random.
+        val button_sound = MediaPlayer.create(this, R.raw.sound_byte_1)
+
         val rnd = Random()
         var todayCountry = rnd.nextInt(arr.size)
 
@@ -714,6 +717,7 @@ class Daily : AppCompatActivity() {
         // to the country held as an answer by the game
         if (guessBtn != null) {
             guessBtn.setOnClickListener{
+                button_sound.start()
                 enteredText = autotextView.text.toString()
                 //val enteredText = getString(R.string.submitted_country) + " " + autotextView.getText()
             }
@@ -730,6 +734,8 @@ class Daily : AppCompatActivity() {
             iv = findViewById<View>(R.id.hintImage) as ImageView?
             iv!!.setImageResource(arr[todayCountry][0])
             guessBtn.setOnClickListener {
+                // this line of code plays the button sound.
+                button_sound.start()
                 //guessBtn!!.setOnClickListener {
                 enteredText = autotextView.text.toString()
 

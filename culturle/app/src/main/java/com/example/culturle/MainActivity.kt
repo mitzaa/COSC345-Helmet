@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import android.media.MediaPlayer
 
 /**
  * This class Object is the instance of the home screen displayed when the app is run. From here the user has a number
@@ -23,6 +24,9 @@ open class MainActivity : AppCompatActivity() {
 
         //Check and update dates
         checkAndUpdateDateVariables()
+        //creates the sound byte to be played by button click
+        val beginSound = MediaPlayer.create(this, R.raw.sound_byte_1)
+        val secondary_sound = MediaPlayer.create(this, R.raw.sound_byte_2)
 
         /*
         * This button is used to direct game users to the GamePlay page so that users may play the game using their
@@ -33,6 +37,8 @@ open class MainActivity : AppCompatActivity() {
         val dailyButtonObj: ImageButton = findViewById<View>(R.id.dailyButton) as ImageButton
         //Create button listen event to switch over to Daily class activity with dailyMode set to true
         dailyButtonObj.setOnClickListener {
+            // This line of code plays the sound byte for the button click
+            beginSound.start()
             if(preferenceManager.getIntValue("attemptedDaily", this) == 0) {
                 preferenceManager.setIntPreference("attemptedDaily", 1, this)
                 dailyMode = true
@@ -53,6 +59,7 @@ open class MainActivity : AppCompatActivity() {
         val practiceButtonObj: ImageButton = findViewById<View>(R.id.practiceButton) as ImageButton
         //Create button listen event to switch over to Daily class activity with dailyMode set to false
         practiceButtonObj.setOnClickListener {
+            beginSound.start()
             dailyMode = false
             val intent = Intent(this, Daily::class.java)
             intent.putExtra("dailyMode", dailyMode)
@@ -66,6 +73,7 @@ open class MainActivity : AppCompatActivity() {
         val infoButtonObj: ImageButton = findViewById<View>(R.id.infoButton) as ImageButton
         //Create button listen event to switch over to Practice class activity
         infoButtonObj.setOnClickListener {
+            secondary_sound.start()
             val intent = Intent(this, Info::class.java)
             startActivity(intent)
         }
@@ -78,6 +86,7 @@ open class MainActivity : AppCompatActivity() {
         val statsButtonObj: ImageButton = findViewById<View>(R.id.statsButton) as ImageButton
         //Create button listen event to switch over to Practice class activity
         statsButtonObj.setOnClickListener {
+            secondary_sound.start()
             val intent = Intent(this, Stats::class.java)
             startActivity(intent)
         }

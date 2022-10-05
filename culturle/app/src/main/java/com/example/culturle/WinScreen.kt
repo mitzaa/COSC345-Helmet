@@ -1,6 +1,7 @@
 package com.example.culturle
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -18,7 +19,7 @@ class WinScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_win_screen)
-
+        val beginSound = MediaPlayer.create(this, R.raw.sound_byte_1)
         val preferenceManager = PreferenceManager()
 
         val dailyMode = intent.getBooleanExtra("dailyMode", false)
@@ -55,6 +56,7 @@ class WinScreen : AppCompatActivity() {
         //Create button listen event to switch over to Practice class activity
         // Intent is the method of handling the switch
         homeButtonObj.setOnClickListener {
+            beginSound.start()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
