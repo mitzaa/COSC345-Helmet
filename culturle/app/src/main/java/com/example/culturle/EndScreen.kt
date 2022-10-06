@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
  */
 class EndScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        val beginSound = MediaPlayer.create(this, R.raw.sound_byte_1)
+        //val beginSound = MediaPlayer.create(this, R.raw.sound_byte_1)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_end_screen)
 
@@ -45,7 +45,7 @@ class EndScreen : AppCompatActivity() {
         //Create button listen event to switch over to Practice class activity
         // Intent is the method of handling the switch
         homeButtonObj.setOnClickListener {
-            beginSound.start()
+            //beginSound.start()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
