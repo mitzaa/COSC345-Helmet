@@ -792,8 +792,8 @@ class Daily : AppCompatActivity() {
                         guessDistance?.text = "Your guess (" + enteredText + ") is ~" + distance.toInt() + "km from the target country."
                         distances[i] = "Your guess (" + enteredText + ") is ~" + distance.toInt() + "km from the target country."
                     } else {
-                        guessDistance?.text = "Unknown Country"
-                        distances[i] = "Unknown Country"
+                        guessDistance?.text = "Your guess is not a valid country. Unknown distance from the target country."
+                        distances[i] = "Your guess is not a valid country. Unknown distance from the target country."
                     }
                     when (i) {
                         0 -> {
