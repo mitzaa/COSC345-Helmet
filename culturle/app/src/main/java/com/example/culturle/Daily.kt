@@ -2,7 +2,6 @@ package com.example.culturle
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -678,16 +677,21 @@ class Daily : AppCompatActivity() {
     private var numGuesses = 1
     private var enteredText = "NONE"
     private var todaysCountry = "NONE"
+    private val rnd = Random()
+    private var todayCountry = rnd.nextInt(arr.size)
+    private var currentIndex = 0
+    private var hintDisplay: TextView? = null
+    private var hints = arrayOf("Hint 1/5: National Animal", "Hint 2/5: National Artwork", "Hint 3/5: National Cuisine", "Hint 4/5: National Languages", "Hint 5/5: National Flag")
+    private var distances = arrayOf("", "", "", "", "")
+    private var guessDistance: TextView? = null
 
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
+        hintDisplay = findViewById<TextView>(R.id.hintTitleTextView)
         // creates a random index column number for the 2-dimensional array so a country entry containing
         // images is chosen at random.
-        val button_sound = MediaPlayer.create(this, R.raw.sound_byte_1)
-
-        val rnd = Random()
-        var todayCountry = rnd.nextInt(arr.size)
+        //val button_sound = MediaPlayer.create(this, R.raw.sound_byte_1)
 
         val dailyMode = intent.getBooleanExtra("dailyMode", false)
         if(dailyMode) {
@@ -713,30 +717,44 @@ class Daily : AppCompatActivity() {
         )
         autotextView.setAdapter(adapter)
 
+        val leftBtn = findViewById<ImageButton>(R.id.leftButton)
+        leftBtn.setOnClickListener {
+            if(currentIndex > 0){
+                updateVariables(currentIndex-1)
+                currentIndex--
+            }
+        }
+        val rightBtn = findViewById<ImageButton>(R.id.rightButton)
+        rightBtn.setOnClickListener {
+            if(currentIndex < 4 && currentIndex < i){
+                updateVariables(currentIndex+1)
+                currentIndex++
+            }
+        }
+
         val guessBtn = findViewById<ImageButton>(R.id.guessButton)
         // This if statement block is used to compare the guess country entered by the user
         // to the country held as an answer by the game
         if (guessBtn != null) {
-            guessBtn.setOnClickListener{
-                button_sound.start()
+            guessBtn.setOnClickListener {
+                //button_sound.start()
                 enteredText = autotextView.text.toString()
                 //val enteredText = getString(R.string.submitted_country) + " " + autotextView.getText()
             }
-            val textView = autotextView
             //val textView = findViewById<AutoCompleteTextView>(R.id.autoTextView)
             val countryResources = resources.getStringArray(R.array.Countries)
             val countryAdapter = ArrayAdapter(
                 this,
                 android.R.layout.simple_list_item_1, countryResources
             )
-            textView.setAdapter(countryAdapter)
+            autotextView.setAdapter(countryAdapter)
             flag = true
             //b1 = findViewById<View>(R.id.guessButton) as Button
             iv = findViewById<View>(R.id.hintImage) as ImageView?
             iv!!.setImageResource(arr[todayCountry][0])
             guessBtn.setOnClickListener {
                 // this line of code plays the button sound.
-                button_sound.start()
+                //button_sound.start()
                 //guessBtn!!.setOnClickListener {
                 enteredText = autotextView.text.toString()
 
@@ -745,7 +763,7 @@ class Daily : AppCompatActivity() {
                 // These blocks of if and else statements are used to determine if the user has entered
                 // a guess which results in a win or a loss that the user is directed to either the loss
                 // page of the game or then win page which displays the points and gains of their attempts.
-                if(enteredText == answers[todayCountry]) {
+                if (enteredText == answers[todayCountry]) {
                     val intent = Intent(this, WinScreen::class.java)
                     intent.putExtra("todaysCountry", todaysCountry)
                     intent.putExtra("todaysFlag", arr[todayCountry])
@@ -755,41 +773,40 @@ class Daily : AppCompatActivity() {
                     // if this if statement condition results as true. This win page is displayed
                     // if the enteredText variable by the user matches the random text value selected
                     // from the answers array. The answer is picked by the random number generator value.
-                }
-                else{
+                } else {
                     // if this if statement condition results as a False Boolean value, the incorrect
                     // answer is removed from the text box component.
-                    textView.text.clear()
+                    autotextView.text.clear()
                     val currentIndex = answers.indexOf(todaysCountry)
                     var guessIndex = 0
-                    if(answers.indexOf(enteredText) != -1){
+                    if (answers.indexOf(enteredText) != -1) {
                         guessIndex = answers.indexOf(enteredText)
                     }
                     val lat1 = countryCoordArr[guessIndex][0]
                     val lon1 = countryCoordArr[guessIndex][1]
                     val lat2 = countryCoordArr[currentIndex][0]
                     val lon2 = countryCoordArr[currentIndex][1]
-                    val guessDistance = findViewById<View>(R.id.distGuess) as TextView
-                    val distance = calcDistance(lat1,lon1,lat2,lon2)
-                    if(answers.indexOf(enteredText) != -1){
-                        guessDistance.text = "Your guess (" + enteredText + ") is ~" + distance.toInt() + "km from the target country."
+                    guessDistance = findViewById<TextView>(R.id.distGuess)
+                    val distance = calcDistance(lat1, lon1, lat2, lon2)
+                    if (answers.indexOf(enteredText) != -1) {
+                        guessDistance?.text = "Your guess (" + enteredText + ") is ~" + distance.toInt() + "km from the target country."
+                        distances[i] = "Your guess (" + enteredText + ") is ~" + distance.toInt() + "km from the target country."
+                    } else {
+                        guessDistance?.text = "Unknown Country"
+                        distances[i] = "Unknown Country"
                     }
-                    else{
-                        guessDistance.text = "Unknown Country"
-                    }
-                    val hintDisplay = findViewById<View>(R.id.hintTitleTextView) as TextView
                     when (i) {
                         0 -> {
-                            hintDisplay.text = "Hint 2/5: National Artwork"
+                            hintDisplay?.text = "Hint 2/5: National Artwork"
                         }
                         1 -> {
-                            hintDisplay.text = "Hint 3/5: National Cuisine"
+                            hintDisplay?.text = "Hint 3/5: National Cuisine"
                         }
                         2 -> {
-                            hintDisplay.text = "Hint 4/5: National Languages"
+                            hintDisplay?.text = "Hint 4/5: National Languages"
                         }
                         3 -> {
-                            hintDisplay.text = "Hint 5/5: National Flag"
+                            hintDisplay?.text = "Hint 5/5: National Flag"
                         }
                     }
                 }
@@ -809,25 +826,25 @@ class Daily : AppCompatActivity() {
                 // the setImageResource variable from the array of country images.
                 if (i < 4) {
                     i++
+                    currentIndex = i
                     numGuesses++
                 }
-                    iv!!.setImageResource(arr[todayCountry][order[i]])
+                iv!!.setImageResource(arr[todayCountry][order[i]])
             }
         }
     }
 
-    private fun calcDistance(lat1 : Double, lon1 : Double, lat2 : Double, lon2 : Double) : Double {
+    private fun calcDistance(lat1: Double, lon1: Double, lat2: Double, lon2: Double): Double {
         val r = 6371 // Radius of the earth in km
-        val dLat = deg2rad(lat2-lat1)  // deg2rad below
-        val dLon = deg2rad(lon2-lon1)
+        val dLat = deg2rad(lat2 - lat1)  // deg2rad below
+        val dLon = deg2rad(lon2 - lon1)
         val a =
             kotlin.math.sin(dLat / 2) * kotlin.math.sin(dLat / 2) +
                     kotlin.math.cos(deg2rad(lat1)) * kotlin.math.cos(deg2rad(lat2)) *
                     kotlin.math.sin(dLon / 2) * kotlin.math.sin(dLon / 2)
 
         val c = 2 * kotlin.math.atan2(kotlin.math.sqrt(a), kotlin.math.sqrt(1 - a))
-        val d = r * c // Distance in km
-        return d
+        return r * c
     }
 
     private fun deg2rad(deg : Double) : Double {
@@ -842,11 +859,18 @@ class Daily : AppCompatActivity() {
         val currentDate2 = sdf2.format(Date())
         val day = currentDate1.toInt()
         val month = currentDate2.toInt()
-        if(day * month <= 90){
-            return day * month
+        return if(day * month <= 90){
+            day * month
+        } else{
+            day + month
         }
-        else{
-            return day + month
-        }
+    }
+
+    private fun updateVariables(target : Int){
+        guessDistance = findViewById<TextView>(R.id.distGuess)
+        hintDisplay = findViewById<TextView>(R.id.hintTitleTextView)
+        iv!!.setImageResource(arr[todayCountry][order[target]])
+        hintDisplay?.text = hints[target]
+        guessDistance?.text = distances[target]
     }
 }
