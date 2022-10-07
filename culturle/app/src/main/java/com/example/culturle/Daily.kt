@@ -781,12 +781,12 @@ class Daily : AppCompatActivity() {
                     // if this if statement condition results as a False Boolean value, the incorrect
                     // answer is removed from the text box component.
                     autotextView.text.clear()
+                    incorrectAnsButtonSound.start()
                     val currentIndex = answers.indexOf(todaysCountry)
                     var guessIndex = 0
                     if (answers.indexOf(enteredText) != -1) {
                         guessIndex = answers.indexOf(enteredText)
                     }
-                    incorrectAnsButtonSound.start()
                     val lat1 = countryCoordArr[guessIndex][0]
                     val lon1 = countryCoordArr[guessIndex][1]
                     val lat2 = countryCoordArr[currentIndex][0]
