@@ -91,18 +91,6 @@
         app:layout_constraintVertical_bias="0.638"
         app:srcCompat="@drawable/ic3" />
 
-    <ImageView
-        android:id="@+id/titleIcon"
-        android:layout_width="139dp"
-        android:layout_height="75dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.001"
-        app:srcCompat="@drawable/title_icon" />
-
     <ImageButton
         android:id="@+id/shareResults"
         android:layout_width="162dp"

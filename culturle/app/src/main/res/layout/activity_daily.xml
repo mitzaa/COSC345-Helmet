@@ -87,26 +87,31 @@
 
     <ImageButton
         android:id="@+id/leftButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="85dp"
+        android:layout_height="86dp"
+        android:background="@drawable/trans_background"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="@+id/autoTextView"
         app:layout_constraintEnd_toStartOf="@+id/autoTextView"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975"
-        app:srcCompat="@drawable/leftarrow" />
+        app:layout_constraintVertical_bias="0.971"
+        app:srcCompat="@drawable/left_arrow" />
 
     <ImageButton
         android:id="@+id/rightButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="85dp"
+        android:layout_height="86dp"
+        android:background="@drawable/trans_background"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="@+id/autoTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975"
-        app:srcCompat="@drawable/rightarrow" />
+
+        app:layout_constraintVertical_bias="0.971"
+        app:srcCompat="@drawable/right_arrow" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
