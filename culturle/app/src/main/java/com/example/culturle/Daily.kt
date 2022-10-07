@@ -2,6 +2,7 @@ package com.example.culturle
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -691,7 +692,8 @@ class Daily : AppCompatActivity() {
         hintDisplay = findViewById<TextView>(R.id.hintTitleTextView)
         // creates a random index column number for the 2-dimensional array so a country entry containing
         // images is chosen at random.
-        //val button_sound = MediaPlayer.create(this, R.raw.sound_byte_1)
+        val correctAnsButtonSound = MediaPlayer.create(this, R.raw.sound_byte_5)
+        val incorrectAnsButtonSound = MediaPlayer.create(this, R.raw.sound_byte_3)
 
         val dailyMode = intent.getBooleanExtra("dailyMode", false)
         if(dailyMode) {
@@ -737,7 +739,9 @@ class Daily : AppCompatActivity() {
         // to the country held as an answer by the game
         if (guessBtn != null) {
             guessBtn.setOnClickListener {
-                //button_sound.start()
+                /*
+                button_sound.start()
+                 */
                 enteredText = autotextView.text.toString()
                 //val enteredText = getString(R.string.submitted_country) + " " + autotextView.getText()
             }
@@ -753,8 +757,6 @@ class Daily : AppCompatActivity() {
             iv = findViewById<View>(R.id.hintImage) as ImageView?
             iv!!.setImageResource(arr[todayCountry][0])
             guessBtn.setOnClickListener {
-                // this line of code plays the button sound.
-                //button_sound.start()
                 //guessBtn!!.setOnClickListener {
                 enteredText = autotextView.text.toString()
 
@@ -764,6 +766,8 @@ class Daily : AppCompatActivity() {
                 // a guess which results in a win or a loss that the user is directed to either the loss
                 // page of the game or then win page which displays the points and gains of their attempts.
                 if (enteredText == answers[todayCountry]) {
+                    // this line of code plays the correct button sound.
+                    correctAnsButtonSound.start()
                     val intent = Intent(this, WinScreen::class.java)
                     intent.putExtra("todaysCountry", todaysCountry)
                     intent.putExtra("todaysFlag", arr[todayCountry])
@@ -782,6 +786,7 @@ class Daily : AppCompatActivity() {
                     if (answers.indexOf(enteredText) != -1) {
                         guessIndex = answers.indexOf(enteredText)
                     }
+                    incorrectAnsButtonSound.start()
                     val lat1 = countryCoordArr[guessIndex][0]
                     val lon1 = countryCoordArr[guessIndex][1]
                     val lat2 = countryCoordArr[currentIndex][0]
@@ -795,19 +800,9 @@ class Daily : AppCompatActivity() {
                         guessDistance?.text = "Your guess is not a valid country. Unknown distance from the target country."
                         distances[i] = "Your guess is not a valid country. Unknown distance from the target country."
                     }
-                    when (i) {
-                        0 -> {
-                            hintDisplay?.text = "Hint 2/5: National Artwork"
-                        }
-                        1 -> {
-                            hintDisplay?.text = "Hint 3/5: National Cuisine"
-                        }
-                        2 -> {
-                            hintDisplay?.text = "Hint 4/5: National Languages"
-                        }
-                        3 -> {
-                            hintDisplay?.text = "Hint 5/5: National Flag"
-                        }
+                    hintDisplay = findViewById<TextView>(R.id.hintTitleTextView)
+                    if(i != 4) {
+                        hintDisplay?.text = hints[i + 1]
                     }
                 }
                 // This if statement executes if the maximum number of guesses has been attempted per
