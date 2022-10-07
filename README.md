@@ -22,6 +22,9 @@ added left and right buttons which enable users to look through their previous h
 
 And their suggestions will be helpful as we continue to evolve the game.
 
+- Note:
+Documentation is not yet hosted on GitHub Pages.
+
 Please see below for information on how to run Culturle on your computer!
 
 
