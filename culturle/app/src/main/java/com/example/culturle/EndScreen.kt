@@ -1,12 +1,15 @@
 package com.example.culturle
 
 import android.content.Intent
+import android.content.ClipData
+import android.content.ClipboardManager
 //import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -48,6 +51,14 @@ class EndScreen : AppCompatActivity() {
             //beginSound.start()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }
+
+        val shareButton: ImageButton = findViewById<View>(R.id.shareResults) as ImageButton
+        val clipboardManager = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+        shareButton!!.setOnClickListener {
+            val clipData = ClipData.newPlainText("label", "My culturle score: ❌ ❌ ❌ ❌ ❌")
+            clipboardManager.setPrimaryClip(clipData)
+            Toast.makeText(this@EndScreen, "Results Copied", Toast.LENGTH_SHORT).show()
         }
     }
 }

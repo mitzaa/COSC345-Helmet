@@ -1,5 +1,7 @@
 package com.example.culturle
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +10,7 @@ import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 
 /**
  * This class Object is the instance of a Winning screen created by the user successfully completing a game.
@@ -58,6 +61,29 @@ class WinScreen : AppCompatActivity() {
             //beginSound.start()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }
+
+        var resultsString = "";
+        if (numGuessesValue == 5) {
+            resultsString = "My culturle score: ❌ ❌ ❌ ❌";
+        }else if (numGuessesValue == 4) {
+            resultsString = "My culturle score: ❌ ❌ ❌ ✅"
+        }else if(numGuessesValue == 3) {
+            resultsString = "My culturle score: ❌ ❌ ✅"
+        }else if(numGuessesValue == 2) {
+            resultsString = "My culturle score: ❌ ✅"
+        }else {
+            resultsString = "My culturle score: ✅"
+        }
+
+
+        val shareButton: ImageButton = findViewById<View>(R.id.shareResults) as ImageButton
+        val clipboardManager = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+        shareButton!!.setOnClickListener {
+            val clipData = ClipData.newPlainText("label", resultsString)
+            clipboardManager.setPrimaryClip(clipData)
+            Toast.makeText(this@WinScreen, "Score copied", Toast.LENGTH_SHORT).show()
+
         }
     }
 }
