@@ -22,16 +22,10 @@ class ExampleUnitTest {
      * A unit test which checks that gamesPlayed has not exceeded gamesWon, and
      * checks that bestStreak does not exceed winStreak.
      */
-//    @Test
-//    fun logicalStats() {
-//        val statsInstance = Stats()
-//        assertTrue(statsInstance.getStat("gamesPlayed") >= statsInstance.getStat("gamesWon"))
-//        assertTrue(statsInstance.getStat("winStreak") <= statsInstance.getStat("bestStreak"))
-//    }
-
-//    @Test
-//    fun correctAnswerPresentInOptions() {
-//        val dailyInstance = Daily()
-//        assertTrue(XXXXArray.contains(todaysCountry))
-//    }
+    @Test
+    fun logicalStats() {
+        val statsInstance = Stats()
+        assertTrue(statsInstance.getStat("gamesPlayed") >= statsInstance.getStat("gamesWon"))
+        assertTrue(statsInstance.getStat("winStreak") <= statsInstance.getStat("bestStreak"))
+    }
 }
