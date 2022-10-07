@@ -2,7 +2,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/2981b8a37e00499fa7ccb5ddc87c7e5f)](https://www.codacy.com/gh/mitzaa/COSC345-Helmet/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mitzaa/COSC345-Helmet&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/mitzaa/COSC345-Helmet/branch/main/graph/badge.svg?token=WH6JSPL0OA)](https://codecov.io/gh/mitzaa/COSC345-Helmet)
 
-Release 1: October 7th, 2022
+Release 1- October 7th, 2022: 
 We are excited to share with you our final release before launch!
 We have been focusing on UI and UE elements accompanied by more bug fixes and user testing.
 - Both of our user testing runs indicated that users would appreciate being able to compete with others,
@@ -19,6 +19,7 @@ added left and right buttons which enable users to look through their previous h
 - We were very happy with the user testing of our release candidate with our last 10 users.
 ![image](https://user-images.githubusercontent.com/97869940/194660870-311b6212-448c-409a-98ba-8eb754d59ce9.png)
 ![image](https://user-images.githubusercontent.com/97869940/194661045-7221ea01-e06e-4216-a6a9-abc8080f573c.png)
+
 And their suggestions will be helpful as we continue to evolve the game.
 
 Please see below for information on how to run Culturle on your computer!
