@@ -2,8 +2,30 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/2981b8a37e00499fa7ccb5ddc87c7e5f)](https://www.codacy.com/gh/mitzaa/COSC345-Helmet/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mitzaa/COSC345-Helmet&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/mitzaa/COSC345-Helmet/branch/main/graph/badge.svg?token=WH6JSPL0OA)](https://codecov.io/gh/mitzaa/COSC345-Helmet)
 
+Release 1: October 7th, 2022
+We are excited to share with you our final release before launch!
+We have been focusing on UI and UE elements accompanied by more bug fixes and user testing.
+- Both of our user testing runs indicated that users would appreciate being able to compete with others,
+so we added a share button that allows you to copy your results to your clipboard and share them with your rivals!
+- Users were confused if they had gotten the answer correct or not when answering questions so we added a "correct" and "incorrect" sound
+to help let them know.
+- We added sounds for the Daily, Practice, Info, and Stats buttons to give the game more character.
+- Designed and implemented a logo for the app.
+- Re-worked the layout of Daily and Practice so that it was more cohesive and easier to understand.
+- Re-designed the text in Daily to be easier to read and fit the theme more.
+- Our user-tests indicated that the game was quite hard and we wanted the Daily and Practice screens to feel more dynamic so we
+added left and right buttons which enable users to look through their previous hints and guesses.
+- Fixed some bugs with flag display issues.
+- We were very happy with the user testing of our release candidate with our last 10 users.
+![image](https://user-images.githubusercontent.com/97869940/194660870-311b6212-448c-409a-98ba-8eb754d59ce9.png)
+![image](https://user-images.githubusercontent.com/97869940/194661045-7221ea01-e06e-4216-a6a9-abc8080f573c.png)
+And their suggestions will be helpful as we continue to evolve the game.
+
+Please see below for information on how to run Culturle on your computer!
+
+
 Beta Release: September 23rd, 2022
-The Beta release of Culturle if finally here!
+The Beta release of Culturle is finally here!
 Here's some of the things we have been working on since the alpha:
   -   Increased the number of countries in-game to 90.
   -   Addressed and fixed over 100 compiler warnings in the Kotlin files. Remaining warnings are spelling or style issues.
